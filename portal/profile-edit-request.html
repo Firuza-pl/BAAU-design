@@ -71,7 +71,7 @@
       <div class="page-head">
         <div>
           <h2>Məlumatlarımı yenilə</h2>
-          <div class="muted">Dəyişdirdiyiniz sahələr HR tərəfindən yoxlanılana qədər əsas profilinizə tətbiq olunmayacaq (hr.employee_change_requests → status: SUBMITTED).</div>
+          <div class="muted">Dəyişdirdiyiniz sahələr HR tərəfindən yoxlanılana qədər əsas profilinizə tətbiq olunmayacaq.</div>
         </div>
         <div class="page-head-actions">
           <a href="my-profile.html" class="btn btn-outline">Ləğv et</a>
@@ -80,7 +80,9 @@
 
       <div class="role-note mb-18">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-        <div>Yalnız dəyişdirdiyiniz sahələr sorğuya daxil ediləcək. Əmək fəaliyyəti məlumatları bu formada yoxdur — onlar yalnız HR/əmr vasitəsilə dəyişdirilir.</div>
+        <div>Yalnız dəyişdirdiyiniz sahələr sorğuya daxil ediləcək.
+           Əmək fəaliyyəti məlumatları bu formada yoxdur
+            — onlar yalnız HR/ƏMR vasitəsilə dəyişdirilir.</div>
       </div>
 
       <div data-tab-group>
@@ -112,7 +114,7 @@
           <div class="card card-pad">
             <div class="subsection-title">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-              hr.employee_personal
+              Şəxsi məlumatlar
             </div>
             <div class="form-grid cols-3">
               <div class="field"><label>Ad</label><input class="input" type="text" value="Aysel" disabled style="color:var(--text-muted); background:var(--surface-alt);" /><div class="field-hint">Ad/soyad dəyişikliyi ayrıca sənəd (əvvəlki soyad və s.) tələb edir — HR ilə əlaqə saxlayın.</div></div>
@@ -144,7 +146,7 @@
           <div class="card card-pad">
             <div class="subsection-title">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
-              hr.employee_contacts / hr.employee_addresses
+             Əlaqə məlumatları
             </div>
             <div class="form-grid">
               <div class="field"><label>Mobil telefon</label><input class="input" type="text" value="+994 55 234 56 78" /></div>
@@ -159,7 +161,7 @@
           <div class="card card-pad">
             <div class="subsection-title">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
-              hr.education_records — yeni təhsil məlumatı əlavə et
+              Təhsil məlumatları— əgər yeni təhsiliniz varsa, məlumatı əlavə edin
             </div>
             <div id="education-rows">
               <div class="repeat-card">
@@ -189,7 +191,7 @@
           <div class="card card-pad">
             <div class="subsection-title">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              hr.employee_family_members — yeni ailə üzvü əlavə et
+              Ailə tərkibi — yeni ailə üzvü əlavə et
             </div>
             <div id="family-rows">
               <div class="repeat-card">
@@ -217,12 +219,12 @@
         <div class="tab-panel" data-tab-panel="prev-employment">
           <div class="role-note mb-18">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-            <div>BAAU-dan əvvəlki iş yerləriniz haqqında məlumatı yalnız siz bilirsiniz, ona görə bu hissəni özünüz doldurursunuz (hr.previous_employment). Təsdiqləndikdən sonra ümumi əmək stajınızın hesablanmasında (hr.employee_experience_periods) nəzərə alınacaq.</div>
+            <div>BAAU-dan əvvəlki iş yerləriniz haqqında məlumatı yalnız siz bilirsiniz, ona görə bu hissəni özünüz doldurursunuz. Təsdiqləndikdən sonra ümumi əmək stajınızın hesablanmasında nəzərə alınacaq.</div>
           </div>
           <div class="card card-pad">
             <div class="subsection-title">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-              hr.previous_employment — BAAU-ya qədərki iş yerləri
+              Staj — BAAU-ya qədərki iş yerləri
             </div>
             <div id="prev-employment-rows">
               <div class="repeat-card">
@@ -251,7 +253,7 @@
         <div class="muted" style="font-size:12.5px;">Status: DRAFT (hələ göndərilməyib)</div>
         <div style="display:flex; gap:10px;">
           <a href="my-profile.html" class="btn btn-outline">Ləğv et</a>
-          <button type="button" class="btn btn-primary" data-modal-open="modal-request-saved">Layihə kimi saxla</button>
+          <button type="button" class="btn btn-primary" data-modal-open="modal-request-saved">Tarixçə kimi saxla</button>
           <button type="button" class="btn btn-accent" data-modal-open="modal-request-submitted">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
             Təsdiqə göndər

@@ -1,273 +1,467 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mənim profilim — BAAU HR</title>
-<link rel="stylesheet" href="../assets/css/style.css" />
-<link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mənim profilim — BAAU HR</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 </head>
+
 <body>
 
-<div class="app-shell">
+  <div class="app-shell">
 
-  <!-- SIDEBAR (EMPLOYEE scope — reduced) -->
-  <aside class="sidebar">
-    <div class="sidebar-brand">
-      <img src="../assets/images/logo.png" alt="BAAU" />
-      <div class="sidebar-brand-text">
-        BAAU HR
-        <span>ŞƏXSİ KABİNET</span>
-      </div>
-    </div>
-
-    <nav class="sidebar-nav">
-      <div class="nav-group">
-        <div class="nav-group-title">Mənim</div>
-        <a class="nav-item active" href="my-profile.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-          Mənim profilim
-        </a>
-        <a class="nav-item" href="my-requests.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          Sorğularım
-          <span class="badge-count">1</span>
-        </a>
-      </div>
-    </nav>
-
-    <div class="sidebar-footer">
-      <a class="sidebar-user" href="../index.html">
-        <div class="avatar avatar-sm">AQ</div>
-        <div class="sidebar-user-info">
-          <div class="sidebar-user-name">Aysel Quliyeva</div>
-          <div class="sidebar-user-role">İşçi</div>
-        </div>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <div class="main">
-    <header class="topbar">
-      <div class="topbar-title">
-        <h1>Mənim profilim</h1>
-        <div class="breadcrumb">Şəxsi kabinet / Mənim profilim</div>
-      </div>
-      <div class="topbar-actions">
-        <div class="topbar-userchip">
-          <div class="avatar avatar-sm">AQ</div>
-          <div>
-            <div class="name">Aysel Quliyeva</div>
-            <div class="role">İşçi · Maliyyə Şöbəsi</div>
-          </div>
+    <!-- SIDEBAR (EMPLOYEE scope — reduced) -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <img src="../assets/images/logo.png" alt="BAAU" />
+        <div class="sidebar-brand-text">
+          BAAU HR
+          <span>ŞƏXSİ KABİNET</span>
         </div>
       </div>
-    </header>
 
-    <div class="content">
-
-      <div class="profile-hero">
-        <div class="avatar avatar-lg">AQ</div>
-        <div class="profile-hero-info">
-          <h2>Aysel Quliyeva</h2>
-          <div class="profile-hero-meta">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16"/></svg>
-              İşçi kodu: BAAU-00214
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h1M9 13h1M14 9h1M14 13h1"/></svg>
-              Maliyyə Şöbəsi
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9M14 17H5M17 3l3 4-3 4M7 13l-3 4 3 4"/></svg>
-              Baş mütəxəssis
-            </span>
-            <span class="badge badge-success">İşləyir</span>
-          </div>
-        </div>
-        <div class="profile-hero-actions">
-          <a href="profile-edit-request.html" class="btn btn-accent">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-            Məlumatları yeniləmək üçün sorğu göndər
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title">Mənim</div>
+          <a class="nav-item active" href="my-profile.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21a8 8 0 0 1 16 0" />
+            </svg>
+            Mənim profilim
+          </a>
+          <a class="nav-item" href="my-requests.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4" />
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+            </svg>
+            Sorğularım
+            <span class="badge-count">1</span>
           </a>
         </div>
-      </div>
+      </nav>
 
-      <div class="role-note mb-18">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-        <div>Bu səhifədəki məlumatlar sistemdəki rəsmi qeydlərdir. Onları birbaşa dəyişə bilməzsiniz — dəyişiklik üçün yuxarıdakı düymədən <b>sorğu</b> göndərin, HR yoxlayıb təsdiqlədikdən sonra profilinizə tətbiq olunacaq.</div>
+      <div class="sidebar-footer">
+        <a class="sidebar-user" href="../index.html">
+          <div class="avatar avatar-sm">AQ</div>
+          <div class="sidebar-user-info">
+            <div class="sidebar-user-name">Aysel Quliyeva</div>
+            <div class="sidebar-user-role">İşçi</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <path d="M16 17l5-5-5-5" />
+            <path d="M21 12H9" />
+          </svg>
+        </a>
       </div>
+    </aside>
 
-      <div data-tab-group>
-        <div class="tabs">
-          <button class="tab-btn active" data-tab-target="personal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-            Şəxsi məlumat
-          </button>
-          <button class="tab-btn" data-tab-target="employment">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Əmək fəaliyyəti
-          </button>
-          <button class="tab-btn" data-tab-target="education">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
-            Təhsil
-          </button>
-          <button class="tab-btn" data-tab-target="leave">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            Məzuniyyət
-          </button>
-          <button class="tab-btn" data-tab-target="family">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Ailə
-          </button>
+    <!-- MAIN -->
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1>Mənim profilim</h1>
+          <div class="breadcrumb">Şəxsi kabinet / Mənim profilim</div>
+        </div>
+        <div class="topbar-actions">
+          <div class="topbar-userchip">
+            <div class="avatar avatar-sm">AQ</div>
+            <div>
+              <div class="name">Aysel Quliyeva</div>
+              <div class="role">İşçi · Maliyyə Şöbəsi</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <div class="profile-hero">
+          <div class="avatar avatar-lg">AQ</div>
+          <div class="profile-hero-info">
+            <h2>Aysel Quliyeva</h2>
+            <div class="profile-hero-meta">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M4 9h16" />
+                </svg>
+                İşçi kodu: BAAU-00214
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h1M9 13h1M14 9h1M14 13h1" />
+                </svg>
+                Maliyyə Şöbəsi
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 3l3 4-3 4M7 13l-3 4 3 4" />
+                </svg>
+                Baş mütəxəssis
+              </span>
+              <span class="badge badge-success">İşləyir</span>
+            </div>
+          </div>
+          <div class="profile-hero-actions">
+            <a href="profile-edit-request.html" class="btn btn-accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+              </svg>
+              Məlumatları yeniləmək üçün sorğu göndər
+            </a>
+          </div>
         </div>
 
-        <!-- Şəxsi məlumat -->
-        <div class="tab-panel active" data-tab-panel="personal">
-          <div class="grid-2">
-            <div class="card card-pad">
-              <div class="subsection-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-                Əsas şəxsi məlumatlar
+        <div class="role-note mb-18">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4M12 8h.01" />
+          </svg>
+          <div>Bu səhifədəki məlumatlar sistemdəki rəsmi qeydlərdir. Onları birbaşa dəyişə bilməzsiniz — dəyişiklik üçün
+            yuxarıdakı düymədən <b>sorğu</b> göndərin, HR yoxlayıb təsdiqlədikdən sonra profilinizə tətbiq olunacaq.
+          </div>
+        </div>
+
+        <div data-tab-group>
+          <div class="tabs">
+            <button class="tab-btn active" data-tab-target="personal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg>
+              Şəxsi məlumat
+            </button>
+            <button class="tab-btn" data-tab-target="employment">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              Əmək fəaliyyəti
+            </button>
+            <button class="tab-btn" data-tab-target="education">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z" />
+                <path d="M6 12v5c3 2 9 2 12 0v-5" />
+              </svg>
+              Təhsil
+            </button>
+            <button class="tab-btn" data-tab-target="leave">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              Məzuniyyət
+            </button>
+            <button class="tab-btn" data-tab-target="family">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              Ailə
+            </button>
+          </div>
+
+          <!-- Şəxsi məlumat -->
+          <div class="tab-panel active" data-tab-panel="personal">
+            <div class="grid-2">
+              <div class="card card-pad">
+                <div class="subsection-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21a8 8 0 0 1 16 0" />
+                  </svg>
+                  Əsas şəxsi məlumatlar
+                </div>
+                <div class="info-grid">
+                  <div class="info-item">
+                    <div class="info-label">Ad, soyad, ata adı</div>
+                    <div class="info-value">Aysel Vüqar qızı Quliyeva</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">Doğum tarixi</div>
+                    <div class="info-value">22.08.1990 (35 yaş)</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">Cinsi</div>
+                    <div class="info-value">Qadın</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">Doğulduğu yer</div>
+                    <div class="info-value">Gəncə şəhəri</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">Vətəndaşlıq</div>
+                    <div class="info-value">Azərbaycan Respublikası</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">Ailə vəziyyəti</div>
+                    <div class="info-value">Evli</div>
+                  </div>
+                </div>
               </div>
+              <div class="card card-pad">
+                <div class="subsection-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  Əlaqə məlumatları
+                </div>
+                <div class="info-grid" style="grid-template-columns:1fr;">
+                  <div class="info-item">
+                    <div class="info-label">Mobil telefon</div>
+                    <div class="info-value">+994 55 234 56 78</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">E-poçt</div>
+                    <div class="info-value">aysel.quliyeva@baau.edu.az</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">Ünvan</div>
+                    <div class="info-value">Bakı ş., Nəsimi r., Bulbul pr. 45</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Əmək fəaliyyəti -->
+          <div class="tab-panel" data-tab-panel="employment">
+            <div class="role-note warn mb-18">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" />
+                <path d="M12 9v4M12 17h.01" />
+              </svg>
+              Bu bölmə yalnız HR tərəfindən, müvafiq əmr (hr.orders) əsasında dəyişdirilə bilər. Sorğu vasitəsilə
+              redaktə edilə bilməz.
+            </div>
+            <div class="card card-pad">
               <div class="info-grid">
-                <div class="info-item"><div class="info-label">Ad, soyad, ata adı</div><div class="info-value">Aysel Vüqar qızı Quliyeva</div></div>
-                <div class="info-item"><div class="info-label">Doğum tarixi</div><div class="info-value">22.08.1990 (35 yaş)</div></div>
-                <div class="info-item"><div class="info-label">Cinsi</div><div class="info-value">Qadın</div></div>
-                <div class="info-item"><div class="info-label">Doğulduğu yer</div><div class="info-value">Gəncə şəhəri</div></div>
-                <div class="info-item"><div class="info-label">Vətəndaşlıq</div><div class="info-value">Azərbaycan Respublikası</div></div>
-                <div class="info-item"><div class="info-label">Ailə vəziyyəti</div><div class="info-value">Evli</div></div>
+                <div class="info-item">
+                  <div class="info-label">Struktur bölmə</div>
+                  <div class="info-value">Maliyyə Şöbəsi</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Vəzifə</div>
+                  <div class="info-value">Baş mütəxəssis</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Ştat forması</div>
+                  <div class="info-value">Ştat</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">İşə qəbul tarixi</div>
+                  <div class="info-value">12.03.2019</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Ümumi əmək stajı</div>
+                  <div class="info-value">8 il 4 ay</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Status</div>
+                  <div class="info-value"><span class="badge badge-success">İşləyir</span></div>
+                </div>
               </div>
             </div>
+            <br>
+            <div class="role-note warn mb-18">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" />
+                <path d="M12 9v4M12 17h.01" />
+              </svg>
+             Bu məlumatı yalnız siz bilirsiniz, ona görə HR yox, siz
+                daxil edirsiniz. Dəyişiklik yenə sorğu vasitəsilə göndərilir.
+            </div>
+            <div class="card card-pad" style="margin-top:18px;">
+              <div class="flex items-center justify-between mb-18">
+
+                <div class="subsection-title" style="margin:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
+                  BAAU-ya qədərki iş stajı
+                </div>
+                <a href="profile-edit-request.html" class="link" style="font-size:12.5px;">+ Əlavə et / düzəlt</a>
+              </div>
+              <div class="timeline-v">
+                <div class="timeline-v-item">
+                  <div class="timeline-v-date">2015 — 2019</div>
+                  <div class="timeline-v-title">Kredit mütəxəssisi</div>
+                  <div class="timeline-v-sub">"Kapital Bank" ASC</div>
+                </div>
+              </div>
+              <div class="field-hint" style="margin-top:14px;"></div>
+            </div>
+          </div>
+
+          <!-- Təhsil -->
+          <div class="tab-panel" data-tab-panel="education">
             <div class="card card-pad">
               <div class="subsection-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
-                Əlaqə məlumatları
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z" />
+                  <path d="M6 12v5c3 2 9 2 12 0v-5" />
+                </svg>
+                Təhsil tarixçəsi
               </div>
-              <div class="info-grid" style="grid-template-columns:1fr;">
-                <div class="info-item"><div class="info-label">Mobil telefon</div><div class="info-value">+994 55 234 56 78</div></div>
-                <div class="info-item"><div class="info-label">E-poçt</div><div class="info-value">aysel.quliyeva@baau.edu.az</div></div>
-                <div class="info-item"><div class="info-label">Ünvan</div><div class="info-value">Bakı ş., Nəsimi r., Bulbul pr. 45</div></div>
+              <div class="timeline-v">
+                <div class="timeline-v-item current">
+                  <div class="timeline-v-date">2012 — 2014</div>
+                  <div class="timeline-v-title">Magistr, Maliyyə</div>
+                  <div class="timeline-v-sub">Azərbaycan Dövlət İqtisad Universiteti</div>
+                </div>
+                <div class="timeline-v-item">
+                  <div class="timeline-v-date">2008 — 2012</div>
+                  <div class="timeline-v-title">Bakalavr, İqtisadiyyat</div>
+                  <div class="timeline-v-sub">Azərbaycan Dövlət İqtisad Universiteti</div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Məzuniyyət -->
+          <div class="tab-panel" data-tab-panel="leave">
+            <div class="grid-3 mb-18">
+              <div class="leave-balance-card">
+                <div class="leave-balance-top">
+                  <div class="name">Əmək məzuniyyəti</div>
+                  <div class="num">30</div>
+                </div>
+                <div class="bar-track" style="margin-bottom:8px;">
+                  <div class="bar-fill" style="width:53%; background:linear-gradient(90deg,var(--success),#22c37f);">
+                  </div>
+                </div>
+                <div style="font-size:12px; color:var(--text-muted);">16 gün istifadə olunub · 14 gün qalıq</div>
+              </div>
+              <div class="leave-balance-card">
+                <div class="leave-balance-top">
+                  <div class="name">Təhsil məzuniyyəti</div>
+                  <div class="num">10</div>
+                </div>
+                <div class="bar-track" style="margin-bottom:8px;">
+                  <div class="bar-fill" style="width:0%;"></div>
+                </div>
+                <div style="font-size:12px; color:var(--text-muted);">10 gün qalıq</div>
+              </div>
+              <div class="leave-balance-card">
+                <div class="leave-balance-top">
+                  <div class="name">Ödənişsiz məzuniyyət</div>
+                  <div class="num">—</div>
+                </div>
+                <div class="bar-track" style="margin-bottom:8px;">
+                  <div class="bar-fill" style="width:0%;"></div>
+                </div>
+                <div style="font-size:12px; color:var(--text-muted);">İstifadə olunmayıb</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>Məzuniyyət qeydlərim</h3>
+                  <div class="muted">leave_records</div>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Növ</th>
+                      <th>Başlama</th>
+                      <th>Bitmə</th>
+                      <th>Müddət</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Əmək məzuniyyəti</td>
+                      <td>01.07.2025</td>
+                      <td>14.07.2025</td>
+                      <td>14 gün</td>
+                      <td><span class="badge badge-neutral">Bitib</span></td>
+                    </tr>
+                    <tr>
+                      <td>Əmək məzuniyyəti</td>
+                      <td>10.02.2025</td>
+                      <td>11.02.2025</td>
+                      <td>2 gün</td>
+                      <td><span class="badge badge-neutral">Bitib</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ailə -->
+          <div class="tab-panel" data-tab-panel="family">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>Ailə üzvlərim</h3>
+                  <div class="muted">İşçinin ailə tərkibinin qeydiyyatı</div>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Ad, soyad</th>
+                      <th>Qohumluq</th>
+                      <th>Doğum tarixi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Orxan Quliyev</td>
+                      <td><span class="tag">Həyat yoldaşı</span></td>
+                      <td>04.11.1988</td>
+                    </tr>
+                    <tr>
+                      <td>Nərmin Quliyeva</td>
+                      <td><span class="tag">Övlad</span></td>
+                      <td>19.05.2016</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Əmək fəaliyyəti -->
-        <div class="tab-panel" data-tab-panel="employment">
-          <div class="role-note warn mb-18">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
-            Bu bölmə yalnız HR tərəfindən, müvafiq əmr (hr.orders) əsasında dəyişdirilə bilər. Sorğu vasitəsilə redaktə edilə bilməz.
-          </div>
-          <div class="card card-pad">
-            <div class="info-grid">
-              <div class="info-item"><div class="info-label">Struktur bölmə</div><div class="info-value">Maliyyə Şöbəsi</div></div>
-              <div class="info-item"><div class="info-label">Vəzifə</div><div class="info-value">Baş mütəxəssis</div></div>
-              <div class="info-item"><div class="info-label">Ştat forması</div><div class="info-value">Ştat</div></div>
-              <div class="info-item"><div class="info-label">İşə qəbul tarixi</div><div class="info-value">12.03.2019</div></div>
-              <div class="info-item"><div class="info-label">Ümumi əmək stajı</div><div class="info-value">8 il 4 ay</div></div>
-              <div class="info-item"><div class="info-label">Status</div><div class="info-value"><span class="badge badge-success">İşləyir</span></div></div>
-            </div>
-          </div>
-
-          <div class="card card-pad" style="margin-top:18px;">
-            <div class="flex items-center justify-between mb-18">
-              <div class="subsection-title" style="margin:0;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                BAAU-ya qədərki iş stajı (hr.previous_employment)
-              </div>
-              <a href="profile-edit-request.html" class="link" style="font-size:12.5px;">+ Əlavə et / düzəlt</a>
-            </div>
-            <div class="timeline-v">
-              <div class="timeline-v-item">
-                <div class="timeline-v-date">2015 — 2019</div>
-                <div class="timeline-v-title">Kredit mütəxəssisi</div>
-                <div class="timeline-v-sub">"Kapital Bank" ASC</div>
-              </div>
-            </div>
-            <div class="field-hint" style="margin-top:14px;">Bu məlumatı yalnız siz bilirsiniz, ona görə HR yox, siz daxil edirsiniz. Dəyişiklik yenə sorğu vasitəsilə göndərilir.</div>
-          </div>
-        </div>
-
-        <!-- Təhsil -->
-        <div class="tab-panel" data-tab-panel="education">
-          <div class="card card-pad">
-            <div class="subsection-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
-              Təhsil tarixçəsi
-            </div>
-            <div class="timeline-v">
-              <div class="timeline-v-item current">
-                <div class="timeline-v-date">2012 — 2014</div>
-                <div class="timeline-v-title">Magistr, Maliyyə</div>
-                <div class="timeline-v-sub">Azərbaycan Dövlət İqtisad Universiteti</div>
-              </div>
-              <div class="timeline-v-item">
-                <div class="timeline-v-date">2008 — 2012</div>
-                <div class="timeline-v-title">Bakalavr, İqtisadiyyat</div>
-                <div class="timeline-v-sub">Azərbaycan Dövlət İqtisad Universiteti</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Məzuniyyət -->
-        <div class="tab-panel" data-tab-panel="leave">
-          <div class="grid-3 mb-18">
-            <div class="leave-balance-card">
-              <div class="leave-balance-top"><div class="name">Əmək məzuniyyəti</div><div class="num">30</div></div>
-              <div class="bar-track" style="margin-bottom:8px;"><div class="bar-fill" style="width:53%; background:linear-gradient(90deg,var(--success),#22c37f);"></div></div>
-              <div style="font-size:12px; color:var(--text-muted);">16 gün istifadə olunub · 14 gün qalıq</div>
-            </div>
-            <div class="leave-balance-card">
-              <div class="leave-balance-top"><div class="name">Təhsil məzuniyyəti</div><div class="num">10</div></div>
-              <div class="bar-track" style="margin-bottom:8px;"><div class="bar-fill" style="width:0%;"></div></div>
-              <div style="font-size:12px; color:var(--text-muted);">10 gün qalıq</div>
-            </div>
-            <div class="leave-balance-card">
-              <div class="leave-balance-top"><div class="name">Ödənişsiz məzuniyyət</div><div class="num">—</div></div>
-              <div class="bar-track" style="margin-bottom:8px;"><div class="bar-fill" style="width:0%;"></div></div>
-              <div style="font-size:12px; color:var(--text-muted);">İstifadə olunmayıb</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header"><div><h3>Məzuniyyət qeydlərim</h3><div class="muted">leave_records</div></div></div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>Növ</th><th>Başlama</th><th>Bitmə</th><th>Müddət</th><th>Status</th></tr></thead>
-                <tbody>
-                  <tr><td>Əmək məzuniyyəti</td><td>01.07.2025</td><td>14.07.2025</td><td>14 gün</td><td><span class="badge badge-neutral">Bitib</span></td></tr>
-                  <tr><td>Əmək məzuniyyəti</td><td>10.02.2025</td><td>11.02.2025</td><td>2 gün</td><td><span class="badge badge-neutral">Bitib</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ailə -->
-        <div class="tab-panel" data-tab-panel="family">
-          <div class="card">
-            <div class="card-header"><div><h3>Ailə üzvlərim</h3><div class="muted">employee_family_members</div></div></div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead><tr><th>Ad, soyad</th><th>Qohumluq</th><th>Doğum tarixi</th></tr></thead>
-                <tbody>
-                  <tr><td>Orxan Quliyev</td><td><span class="tag">Həyat yoldaşı</span></td><td>04.11.1988</td></tr>
-                  <tr><td>Nərmin Quliyeva</td><td><span class="tag">Övlad</span></td><td>19.05.2016</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
-</div>
 
-<script src="../assets/js/app.js"></script>
+  <script src="../assets/js/app.js"></script>
 </body>
+
 </html>

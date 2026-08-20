@@ -124,7 +124,7 @@
       <div class="page-head">
         <div>
           <h2>Yeni işçi əlavə et</h2>
-          <div class="muted">Yalnız əsas identifikasiya (hr.employees). İş yeri, vəzifə və müqavilə buraya daxil deyil — onlar "İşə qəbul" əmri təsdiqlənəndə yaranır.</div>
+          <div class="muted"> İş yeri, vəzifə və müqavilə buraya daxil deyil — onlar "İşə qəbul" əmri təsdiqlənəndə yaranır.</div>
         </div>
         <div class="page-head-actions">
           <a href="employees.html" class="btn btn-outline">Ləğv et</a>
@@ -139,14 +139,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
         <div>
           Bu formada yalnız işçinin <b>identifikasiyası</b> yaranır. Digər addımlar ayrıca, öz vaxtında baş verir:
-          <br />1) hesab açıb dəvət göndərin → 2) işçi öz şəxsi/əlaqə/təhsil məlumatını sorğu kimi göndərir, siz təsdiqləyirsiniz → 3) <b>"İşə qəbul" əmrini</b> siz yaradıb təsdiqləyəndə struktur bölmə, vəzifə, müqavilə və işə başlama tarixi həmin an yazılır (hr.employment_records, hr.employment_contracts).
+          <br />1) hesab açıb dəvət göndərin → 2) işçi öz şəxsi/əlaqə/təhsil məlumatını sorğu kimi göndərir, siz təsdiqləyirsiniz → 3) <b>"İşə qəbul" əmrini</b> siz yaradıb təsdiqləyəndə struktur bölmə, vəzifə, müqavilə və işə başlama tarixi həmin an yazılır 
         </div>
       </div>
 
       <div class="card card-pad">
         <div class="subsection-title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-          Əsas identifikasiya (hr.employees)
+          Əsas identifikasiya 
         </div>
         <div class="form-grid cols-3">
           <div class="field"><label>Ad <span class="req">*</span></label><input class="input" type="text" placeholder="Aysel" /></div>
@@ -160,7 +160,7 @@
           <div class="field">
             <label>İşçi kodu</label>
             <input class="input" type="text" value="Avtomatik: BAAU-00xxx" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
-            <div class="field-hint">Saxlanıldıqda avtomatik generasiya olunur</div>
+            <div class="field-hint">Avtomatik yaranır</div>
           </div>
           <div class="field">
             <label>Şəkil</label>
@@ -170,7 +170,7 @@
             </div>
           </div>
         </div>
-        <div class="field-hint" style="margin-top:4px;">Doğum tarixi, cins, vətəndaşlıq, FİN kimi şəxsi məlumatlar hr.employee_personal-a işçinin özü tərəfindən, hesab aktivləşdikdən sonra daxil edilir.</div>
+        <div class="field-hint" style="margin-top:4px;">Doğum tarixi, cins, vətəndaşlıq, FİN kimi şəxsi məlumatlar işçinin özü tərəfindən, hesab aktivləşdikdən sonra daxil edilir.</div>
       </div>
 
     </div>
@@ -185,7 +185,8 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
       <h3 class="modal-title">İşçi əlavə olundu</h3>
-      <p class="modal-text">Yeni işçi qeydi <b>hr.employees</b> cədvəlinə yazıldı. Növbəti addım: bu işçiyə login hesabı açıb dəvət göndərin — o daxil olub öz şəxsi/əlaqə/təhsil məlumatlarını dolduracaq, siz təsdiqləyəcəksiniz. (Rəsmi işə qəbul əmri lazımdırsa, onu ayrıca Əmrlər bölməsindən yaradın.)</p>
+      <p class="modal-text">Yeni işçi qeydi <b>İşçilər</b> cədvəlinə yazıldı.
+         Növbəti addım: bu işçiyə hesab açıb dəvət göndərin — o daxil olub öz şəxsi məlumatlarını dolduracaq, siz təsdiqləyəcəksiniz. (Rəsmi işə qəbul əmri ayrıca Əmrlər bölməsindən yaradılır)</p>
       <div class="modal-actions">
         <a href="employees.html" class="btn btn-outline">İşçilər siyahısı</a>
         <a href="../accounts/account-create.html" class="btn btn-primary">Hesab aç</a>
