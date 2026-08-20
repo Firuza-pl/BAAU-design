@@ -7,7 +7,73 @@ document.addEventListener("DOMContentLoaded", function () {
   initRadioCards();
   initRepeatRows();
   initCascadingSelects();
+  initPageLoader();
+  initScrollTop();
 });
+
+/* =========================================================
+   Page-transition loading bar
+   Fills in on every page load, and kicks off again on click
+   of any internal link so navigation between pages feels alive.
+   ========================================================= */
+
+function initPageLoader() {
+  var bar = document.createElement("div");
+  bar.className = "page-loader";
+  document.body.appendChild(bar);
+
+  requestAnimationFrame(function () {
+    bar.style.width = "100%";
+  });
+  setTimeout(function () { bar.classList.add("done"); }, 280);
+  setTimeout(function () { bar.remove(); }, 600);
+
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href]");
+    if (!link) return;
+    var href = link.getAttribute("href");
+    if (!href || href.charAt(0) === "#" || href.indexOf("javascript:") === 0) return;
+    if (link.target === "_blank" || link.hasAttribute("download")) return;
+
+    var travelBar = document.querySelector(".page-loader");
+    if (!travelBar) {
+      travelBar = document.createElement("div");
+      travelBar.className = "page-loader";
+      document.body.appendChild(travelBar);
+    }
+    travelBar.classList.remove("done");
+    travelBar.style.transition = "none";
+    travelBar.style.width = "0%";
+    void travelBar.offsetWidth;
+    travelBar.style.transition = "";
+    travelBar.style.width = "78%";
+  });
+}
+
+/* =========================================================
+   Scroll-to-top button
+   Shows once the page has been scrolled down a bit.
+   ========================================================= */
+
+function initScrollTop() {
+  var btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "scroll-top-btn";
+  btn.setAttribute("aria-label", "Yuxarı qayıt");
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+  document.body.appendChild(btn);
+
+  function toggle() {
+    if (window.scrollY > 320) btn.classList.add("visible");
+    else btn.classList.remove("visible");
+  }
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 function initTabs() {
   var tabButtons = document.querySelectorAll("[data-tab-target]");
