@@ -9,7 +9,46 @@ document.addEventListener("DOMContentLoaded", function () {
   initCascadingSelects();
   initPageLoader();
   initScrollTop();
+  initUserMenu();
+  initPasswordToggles();
 });
+
+/* =========================================================
+   Sidebar user menu (logout)
+   ========================================================= */
+
+function initUserMenu() {
+  document.querySelectorAll("[data-user-menu-toggle]").forEach(function (toggle) {
+    var menu = toggle.parentElement.querySelector("[data-user-menu]");
+    if (!menu) return;
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menu.classList.toggle("open");
+    });
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll("[data-user-menu].open").forEach(function (m) {
+      m.classList.remove("open");
+    });
+  });
+}
+
+/* =========================================================
+   Password show/hide toggles ([data-toggle="password"] wrapper)
+   ========================================================= */
+
+function initPasswordToggles() {
+  document.querySelectorAll(".input-icon-wrap.has-toggle").forEach(function (wrap) {
+    var toggle = wrap.querySelector(".password-toggle");
+    var input = wrap.querySelector("input");
+    if (!toggle || !input) return;
+    toggle.addEventListener("click", function () {
+      var showing = input.type === "text";
+      input.type = showing ? "password" : "text";
+      toggle.classList.toggle("showing", !showing);
+    });
+  });
+}
 
 /* =========================================================
    Page-transition loading bar
@@ -95,6 +134,13 @@ function initTabs() {
       if (panel) panel.classList.add("active");
     });
   });
+
+  // Deep-linking: /page.html#tab-id opens straight into that tab.
+  var hash = window.location.hash.replace("#", "");
+  if (hash) {
+    var target = document.querySelector('[data-tab-target="' + hash + '"]');
+    if (target) target.click();
+  }
 }
 
 function initTableFilter() {

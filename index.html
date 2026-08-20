@@ -149,7 +149,7 @@
 
 <script src="assets/js/app.js"></script>
 <script>
-  // Account-type card selection + password show/hide toggle (login page only).
+  // Account-type card selection (login page only).
   document.addEventListener("DOMContentLoaded", function () {
     var cards = document.querySelectorAll(".account-card");
     var identifierLabel = document.getElementById("login-identifier-label");
@@ -163,17 +163,6 @@
         if (identifierLabel) identifierLabel.textContent = card.dataset.label;
         if (identifierInput) identifierInput.placeholder = card.dataset.placeholder;
         if (submitBtn) submitBtn.firstChild.textContent = card.dataset.btn + " ";
-      });
-    });
-
-    document.querySelectorAll(".input-icon-wrap.has-toggle").forEach(function (wrap) {
-      var toggle = wrap.querySelector(".password-toggle");
-      var input = wrap.querySelector("input");
-      if (!toggle || !input) return;
-      toggle.addEventListener("click", function () {
-        var showing = input.type === "text";
-        input.type = showing ? "password" : "text";
-        toggle.classList.toggle("showing", !showing);
       });
     });
   });

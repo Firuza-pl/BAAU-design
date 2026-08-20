@@ -90,13 +90,19 @@
     </nav>
 
     <div class="sidebar-footer">
-      <div class="sidebar-user">
+      <div class="sidebar-user" data-user-menu-toggle>
         <div class="avatar avatar-sm">RE</div>
         <div class="sidebar-user-info">
           <div class="sidebar-user-name">Rüstəm Ələkbərov</div>
           <div class="sidebar-user-role">HR Administrator</div>
         </div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="user-menu" data-user-menu>
+        <a href="../index.html" class="user-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+          Çıxış
+        </a>
       </div>
     </div>
   </aside>
@@ -124,7 +130,7 @@
       <div class="page-head">
         <div>
           <h2>Yeni əmr yarat</h2>
-          <div class="muted">Sahə → kateqoriya → növ → alt növ seçimi ilə uyğun əmr formalaşdırılır (hr.orders)</div>
+          <div class="muted">Sahə → kateqoriya → növ → alt növ seçimi ilə uyğun əmr formalaşdırılır</div>
         </div>
         <div class="page-head-actions">
           <a href="orders.html" class="btn btn-outline">Ləğv et</a>
@@ -141,23 +147,23 @@
             </div>
             <div class="form-grid">
               <div class="field form-span-2">
-                <label>Fəaliyyət sahəsi (order_fields) <span class="req">*</span></label>
+                <label>Fəaliyyət sahəsi <span class="req">*</span></label>
                 <select class="input" data-order-field></select>
               </div>
               <div class="field form-span-2">
-                <label>Kateqoriya (order_classifications) <span class="req">*</span></label>
+                <label>Kateqoriya  <span class="req">*</span></label>
                 <select class="input" data-order-classification></select>
               </div>
               <div class="field">
-                <label>Əmr növü (order_types) <span class="req">*</span></label>
+                <label>Əmr növü  <span class="req">*</span></label>
                 <select class="input" data-order-type></select>
               </div>
               <div class="field">
-                <label>Alt növ (order_subtypes) <span class="req">*</span></label>
+                <label>Alt növ <span class="req">*</span></label>
                 <select class="input" data-order-subtype></select>
               </div>
             </div>
-            <div class="field-hint" style="margin-top:8px;">orders.subtype_id → order_subtypes.order_type_id → order_types zənciri ilə əlaqələndirilir.</div>
+            <div class="field-hint" style="margin-top:8px;"></div>
           </div>
 
           <div class="card card-pad mb-18">
@@ -194,7 +200,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
               İş yeri təyinatı (yalnız İşə qəbul əmri üçün)
             </div>
-            <div class="field-hint" style="margin-top:-4px; margin-bottom:14px;">Bu əmr təsdiqlənən an <b>hr.employment_records</b> və <b>hr.employment_contracts</b> məhz bu məlumatlarla yaranacaq.</div>
+            <div class="field-hint" style="margin-top:-4px; margin-bottom:14px;">Bu əmr təsdiqlənən an <b>iş tarixcəsi</b> və <b>əmək müqaviləsi məlumatları</b> məhz bu məlumatlarla yaranacaq.</div>
             <div class="form-grid">
               <div class="field">
                 <label>Struktur bölmə <span class="req">*</span></label>
@@ -222,7 +228,7 @@
             </div>
 
             <div class="field" style="margin-top:4px;">
-              <label>Ştat forması (hr.employee_statuses) <span class="req">*</span></label>
+              <label>Ştat forması <span class="req">*</span></label>
               <div class="radio-card-group">
                 <label class="radio-card selected">
                   <input type="radio" name="staff-form" checked /> Ştat
@@ -259,7 +265,7 @@
                 </select>
               </div>
             </div>
-            <div class="field-hint" style="margin-top:10px;">Müqavilə № əmr təsdiqlənəndə avtomatik generasiya olunur.</div>
+            <div class="field-hint" style="margin-top:10px; color:red">Müqavilə № əmr təsdiqlənəndə avtomatik generasiya olunur.</div>
           </div>
 
           <div class="card card-pad">
@@ -303,29 +309,29 @@
               <div class="timeline-v-item current">
                 <div class="timeline-v-date">1-Cİ ADDIM</div>
                 <div class="timeline-v-title">Sahə seçin</div>
-                <div class="timeline-v-sub">order_fields — məsələn "Kadr məsələləri"</div>
+                <div class="timeline-v-sub">ümumi fəaliyyət sahələrinin kataloqu - məsələn "Kadr məsələləri"</div>
               </div>
               <div class="timeline-v-item">
                 <div class="timeline-v-date">2-Cİ ADDIM</div>
                 <div class="timeline-v-title">Kateqoriya seçin</div>
-                <div class="timeline-v-sub">order_classifications — ümumi mövzu</div>
+                <div class="timeline-v-sub">aid olduğu kateqoriya — ümumi mövzu</div>
               </div>
               <div class="timeline-v-item">
                 <div class="timeline-v-date">3-CÜ ADDIM</div>
                 <div class="timeline-v-title">Növ və alt növ təyin edin</div>
-                <div class="timeline-v-sub">order_types → order_subtypes — dəqiq əməliyyat</div>
+                <div class="timeline-v-sub">əmr daxilində dəqiq hansı əməliyyatın aparılır — dəqiq əməliyyat</div>
               </div>
               <div class="timeline-v-item">
                 <div class="timeline-v-date">4-CÜ ADDIM</div>
                 <div class="timeline-v-title">Təsdiqlədikdə...</div>
-                <div class="timeline-v-sub">employment_records / leave_records avtomatik yenilənir</div>
+                <div class="timeline-v-sub">işci tarixcəsi və əmək müqaviləsi avtomatik yenilənir</div>
               </div>
             </div>
           </div>
 
           <div class="role-note warn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
-            Əmr silindikdə əlaqəli iş qeydləri (employment_history, leave_balance_transactions) avtomatik geri alınmır — HR administratoru ayrıca yoxlamalıdır.
+            Əmr silindikdə əlaqəli iş qeydləri avtomatik geri alınmır — HR administratoru ayrıca yoxlamalıdır.
           </div>
         </div>
       </div>
@@ -335,7 +341,7 @@
         <div style="display:flex; gap:10px;">
           <a href="orders.html" class="btn btn-outline">Ləğv et</a>
           <button type="button" class="btn btn-primary" data-modal-open="modal-order-created" data-status="draft">
-            Layihə kimi saxla
+            Tarixcə kimi saxla
           </button>
           <button type="button" class="btn btn-accent" data-modal-open="modal-order-created">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -356,7 +362,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
       <h3 class="modal-title">Əmr yaradıldı</h3>
-      <p class="modal-text">Yeni əmr <b>hr.orders</b> cədvəlinə əlavə olundu. Təsdiqləndikdən sonra əlaqəli iş/məzuniyyət qeydləri avtomatik yenilənəcək.</p>
+      <p class="modal-text">Yeni əmr <b>Əmrlər</b> cədvəlinə əlavə olundu. Təsdiqləndikdən sonra əlaqəli iş/məzuniyyət qeydləri avtomatik yenilənəcək.</p>
       <div class="modal-actions">
         <a href="orders.html" class="btn btn-primary" style="flex:1;">Əmrlər siyahısına qayıt</a>
       </div>

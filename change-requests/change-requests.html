@@ -90,13 +90,19 @@
     </nav>
 
     <div class="sidebar-footer">
-      <div class="sidebar-user">
+      <div class="sidebar-user" data-user-menu-toggle>
         <div class="avatar avatar-sm">RE</div>
         <div class="sidebar-user-info">
           <div class="sidebar-user-name">Rüstəm Ələkbərov</div>
           <div class="sidebar-user-role">HR Administrator</div>
         </div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="user-menu" data-user-menu>
+        <a href="../index.html" class="user-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+          Çıxış
+        </a>
       </div>
     </div>
   </aside>
@@ -128,14 +134,16 @@
       <div class="page-head">
         <div>
           <h2>Dəyişiklik sorğuları</h2>
-          <div class="muted">hr.employee_change_requests — işçilər öz məlumatlarını birbaşa dəyişmir, sorğu göndərir. Təsdiqlənən sorğular əsas hr cədvəllərinə yazılır, bütün qərarlar audit olaraq saxlanılır.</div>
+          <div class="muted">İşçilər öz məlumatlarını birbaşa dəyişmir, 
+            sorğu göndərir. Təsdiqlənən sorğular əsas
+             HR cədvəllərinə yazılır, bütün qərarlar audit olaraq saxlanılır.</div>
         </div>
       </div>
 
       <div class="stat-grid" style="margin-bottom:20px;">
         <div class="stat-tile">
           <div class="stat-tile-top"><div class="stat-icon warning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div></div>
-          <div><div class="stat-value" id="stat-pending">3</div><div class="stat-label">Baxılmamış (SUBMITTED)</div></div>
+          <div><div class="stat-value" id="stat-pending">3</div><div class="stat-label">Gözləyən</div></div>
         </div>
         <div class="stat-tile">
           <div class="stat-tile-top"><div class="stat-icon success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div></div>
@@ -260,7 +268,7 @@
                 <td class="status-cell"><span class="badge badge-success">Təsdiqləndi</span></td>
                 <td class="action-cell">
                   <div class="cell-actions">
-                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-approved-0987">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
                     </button>
                   </div>
@@ -283,7 +291,7 @@
                 <td class="status-cell"><span class="badge badge-danger">Rədd edildi</span></td>
                 <td class="action-cell">
                   <div class="cell-actions">
-                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-rejected-0812">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
                     </button>
                   </div>
@@ -311,20 +319,20 @@
     <div class="modal-body text-left">
       <div class="subsection-title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-        Təklif olunan dəyişikliklər (employee_change_request_items)
+        Təklif olunan dəyişikliklər 
       </div>
       <div class="table-wrap mb-18">
         <table class="data-table">
-          <thead><tr><th>Sahə (entity_type)</th><th>Əvvəlki dəyər</th><th>Təklif olunan dəyər</th></tr></thead>
+          <thead><tr><th>Sahə </th><th>Əvvəlki dəyər</th><th>Təklif olunan dəyər</th></tr></thead>
           <tbody>
-            <tr><td>employee_personal.father_name</td><td class="text-muted">Vüqar oğlu</td><td><b>Vüqar qızı</b></td></tr>
-            <tr><td>employee_addresses.address_line</td><td class="text-muted">Bakı ş., Yasamal r., Nizami 12</td><td><b>Bakı ş., Nəsimi r., Bulbul pr. 45</b></td></tr>
+            <tr><td>Ata adı</td><td class="text-muted">Vüqar oğlu</td><td><b>Vüqar qızı</b></td></tr>
+            <tr><td>Yaşayış yeri</td><td class="text-muted">Bakı ş., Yasamal r., Nizami 12</td><td><b>Bakı ş., Nəsimi r., Bulbul pr. 45</b></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="field">
-        <label>Rəy / qeyd (reviewer_note) <span class="text-muted" style="font-weight:500;">— rədd edərkən məcburidir</span></label>
+        <label>Rəy / qeyd <span class="text-muted" style="font-weight:500;">— rədd edərkən məcburidir</span></label>
         <textarea class="input" id="reviewer-note" rows="3" placeholder="Qərarınızın səbəbini qeyd edin..."></textarea>
       </div>
 
@@ -337,6 +345,68 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
           Təsdiqlə
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIEW: APPROVED DETAIL MODAL -->
+<div class="modal-overlay" id="modal-view-approved-0987" data-modal-close>
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <h3>#REQ-0987 — Ünvan yeniləməsi</h3>
+      <button type="button" class="modal-close" data-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body text-left">
+      <div class="flex items-center gap-8 mb-18">
+        <span class="badge badge-success">Təsdiqləndi</span>
+        <span class="text-muted" style="font-size:12.5px;">04.06.2026 tarixində Sevinc Nəsirova (HR) tərəfindən</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Sahə</th><th>Əvvəlki dəyər</th><th>Təklif olunan dəyər</th></tr></thead>
+          <tbody>
+            <tr><td>Ünvan</td><td class="text-muted">Bakı ş., Yasamal r., Nizami 12</td><td><b>Bakı ş., Nəsimi r., Bulbul pr. 45</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-actions" style="margin-top:20px;">
+        <button type="button" class="btn btn-outline" style="flex:1;" data-modal-close>Bağla</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIEW: REJECTED DETAIL MODAL -->
+<div class="modal-overlay" id="modal-view-rejected-0812" data-modal-close>
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <h3>#REQ-0812 — Ailə üzvü əlavəsi</h3>
+      <button type="button" class="modal-close" data-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body text-left">
+      <div class="flex items-center gap-8 mb-18">
+        <span class="badge badge-danger">Rədd edildi</span>
+        <span class="text-muted" style="font-size:12.5px;">12.03.2026 tarixində Sevinc Nəsirova (HR) tərəfindən</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Sahə</th><th>Təklif olunan dəyər</th></tr></thead>
+          <tbody>
+            <tr><td>Ailə üzvü (yeni)</td><td><b>Nərmin Quliyeva — Övlad — 19.05.2016</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="role-note warn" style="margin-top:16px; margin-bottom:0;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <div><b>HR qeydi:</b> "Doğum tarixi sənədlə (doğum şəhadətnaməsi) təsdiqlənməyib, zəhmət olmasa sənəd əlavə edib yenidən göndərin."</div>
+      </div>
+      <div class="modal-actions" style="margin-top:20px;">
+        <button type="button" class="btn btn-outline" style="flex:1;" data-modal-close>Bağla</button>
       </div>
     </div>
   </div>

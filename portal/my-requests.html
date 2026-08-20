@@ -71,7 +71,7 @@
       <div class="page-head">
         <div>
           <h2>Dəyişiklik sorğularım</h2>
-          <div class="muted">hr.employee_change_requests — göndərdiyiniz bütün sorğuların statusu və HR rəyi</div>
+          <div class="muted">Göndərdiyiniz bütün sorğuların statusu və HR rəyi</div>
         </div>
         <div class="page-head-actions">
           <a href="profile-edit-request.html" class="btn btn-accent">
@@ -105,7 +105,7 @@
                 <td><span class="badge badge-warning">Gözləyir</span></td>
                 <td>
                   <div class="cell-actions">
-                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-request-detail-pending">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
                     </button>
                   </div>
@@ -166,6 +166,36 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- PENDING DETAIL MODAL -->
+<div class="modal-overlay" id="modal-request-detail-pending" data-modal-close>
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <h3>#REQ-1042 — Ata adı və ünvan yeniləməsi</h3>
+      <button type="button" class="modal-close" data-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body text-left">
+      <div class="flex items-center gap-8 mb-18">
+        <span class="badge badge-warning">Gözləyir</span>
+        <span class="text-muted" style="font-size:12.5px;">15.08.2026 tarixində göndərilib, hələ HR tərəfindən baxılmayıb</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Sahə</th><th>Əvvəlki dəyər</th><th>Təklif olunan dəyər</th></tr></thead>
+          <tbody>
+            <tr><td>Ata adı</td><td class="text-muted">Vüqar oğlu</td><td><b>Vüqar qızı</b></td></tr>
+            <tr><td>Yaşayış yeri</td><td class="text-muted">Bakı ş., Yasamal r., Nizami 12</td><td><b>Bakı ş., Nəsimi r., Bulbul pr. 45</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-actions" style="margin-top:20px;">
+        <button type="button" class="btn btn-outline" style="flex:1;" data-modal-close>Bağla</button>
+      </div>
     </div>
   </div>
 </div>

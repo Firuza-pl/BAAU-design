@@ -90,13 +90,19 @@
     </nav>
 
     <div class="sidebar-footer">
-      <div class="sidebar-user">
+      <div class="sidebar-user" data-user-menu-toggle>
         <div class="avatar avatar-sm">RE</div>
         <div class="sidebar-user-info">
           <div class="sidebar-user-name">Rüstəm Ələkbərov</div>
           <div class="sidebar-user-role">HR Administrator</div>
         </div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="user-menu" data-user-menu>
+        <a href="../index.html" class="user-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+          Çıxış
+        </a>
       </div>
     </div>
   </aside>
@@ -143,14 +149,17 @@
             <div class="form-grid">
               <div class="field form-span-2">
                 <label>hr.employees-dən işçi <span class="req">*</span></label>
-                <select class="input" id="account-employee-select">
-                  <option value="">Ad, soyad və ya işçi kodu üzrə seçin</option>
-                  <option data-dept="Maliyyə Şöbəsi" data-position="Mütəxəssis" data-username="elvin.qasimov" data-email="elvin.qasimov@baau.edu.az" data-fullname="Elvin Qasımov">Elvin Qasımov — BAAU-00512 (Maliyyə Şöbəsi)</option>
-                  <option data-dept="Kompüter Elmləri Kafedrası" data-position="Kafedra müdiri" data-username="gunel.mammadova" data-email="gunel.mammadova@baau.edu.az" data-fullname="Günel Məmmədova">Günel Məmmədova — BAAU-00098 (Kompüter Elmləri Kafedrası)</option>
-                  <option data-dept="Hüquq Fakültəsi" data-position="Dosent" data-username="vuqar.aliyev" data-email="vuqar.aliyev@baau.edu.az" data-fullname="Vüqar Əliyev">Vüqar Əliyev — BAAU-00073 (Hüquq Fakültəsi)</option>
-                  <option data-dept="İqtisadiyyat və İdarəetmə Fakültəsi" data-position="Fakültə rəhbəri" data-username="nermin.safarova" data-email="nermin.safarova@baau.edu.az" data-fullname="Nərmin Səfərova">Nərmin Səfərova — BAAU-00021 (İqtisadiyyat və İdarəetmə Fakültəsi)</option>
-                </select>
-                <div class="field-hint">Yalnız hazırda aktiv işləyən (işçi statusu = İşləyir) və hələ hesabı olmayan işçilər siyahıda göstərilir.</div>
+                <div class="input-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+                  <input class="input" type="text" id="account-employee-select" list="account-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." />
+                </div>
+                <datalist id="account-employee-list">
+                  <option value="Elvin Qasımov — BAAU-00512 (Maliyyə Şöbəsi)"></option>
+                  <option value="Günel Məmmədova — BAAU-00098 (Kompüter Elmləri Kafedrası)"></option>
+                  <option value="Vüqar Əliyev — BAAU-00073 (Hüquq Fakültəsi)"></option>
+                  <option value="Nərmin Səfərova — BAAU-00021 (İqtisadiyyat və İdarəetmə Fakültəsi)"></option>
+                </datalist>
+                <div class="field-hint">Yalnız hazırda aktiv işləyən (işçi statusu = İşləyir) və hələ hesabı olmayan işçilər siyahıda göstərilir. Axtarmaq üçün adı və ya işçi kodunu yazmağa başlayın.</div>
               </div>
               <div class="field">
                 <label>Struktur bölmə</label>
@@ -248,13 +257,27 @@
             </div>
             <div class="radio-card-group" style="grid-template-columns: 1fr;">
               <label class="radio-card selected">
-                <input type="radio" name="invite-method" checked /> Dəvət linki göndər (e-poçtla, tövsiyə olunur)
+                <input type="radio" name="invite-method" id="invite-method-link" checked /> Dəvət linki göndər (e-poçtla, tövsiyə olunur)
               </label>
               <label class="radio-card">
-                <input type="radio" name="invite-method" /> Müvəqqəti parol təyin et (əl ilə bildir)
+                <input type="radio" name="invite-method" id="invite-method-manual" /> Müvəqqəti parol təyin et (əl ilə bildir)
               </label>
             </div>
-            <div class="field-hint" style="margin-top:10px;">Hesab yaradıldıqda status <b>INVITED</b> olacaq. İşçi linkdən keçib öz parolunu təyin edəndə status <b>ACTIVE</b>-ə dəyişəcək.</div>
+
+            <div class="field" id="manual-password-field" style="display:none; margin-top:14px;">
+              <label>Müvəqqəti parol <span class="req">*</span></label>
+              <div class="input-icon-wrap has-toggle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                <input class="input" type="password" id="manual-password-input" placeholder="Müvəqqəti parolu daxil edin" />
+                <button type="button" class="password-toggle" aria-label="Şifrəni göstər">
+                  <svg class="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.6 18.6 0 0 1 5.06-5.94M9.9 4.24A10.6 10.6 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="M1 1l22 22"/></svg>
+                </button>
+              </div>
+              <div class="field-hint">Bu parolu işçiyə əl ilə (şifahi, SMS və s. yolla) bildirməlisiniz. İlk girişdə dəyişdirilməsi tələb olunacaq.</div>
+            </div>
+
+            <div class="field-hint" style="margin-top:10px;">Dəvət linki seçildikdə status <b>INVITED</b> olacaq və işçi linkdən keçib öz parolunu təyin edəndə <b>ACTIVE</b>-ə dəyişəcək. Müvəqqəti parol seçildikdə hesab birbaşa <b>ACTIVE</b> statusunda yaradılacaq.</div>
           </div>
         </div>
       </div>
@@ -263,9 +286,9 @@
         <div class="muted" style="font-size:12.5px;">Hesab hələ yaradılmayıb</div>
         <div style="display:flex; gap:10px;">
           <a href="accounts.html" class="btn btn-outline">Ləğv et</a>
-          <button type="button" class="btn btn-accent" data-modal-open="modal-account-created">
+          <button type="button" class="btn btn-accent" id="account-submit-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Hesab yarat və dəvət göndər
+            <span id="account-submit-btn-label">Hesab yarat və dəvət göndər</span>
           </button>
         </div>
       </div>
@@ -282,7 +305,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
       <h3 class="modal-title">Hesab yaradıldı</h3>
-      <p class="modal-text">Yeni hesab <b>Hesablar</b> cədvəlinə yazıldı (status: <b>INVITED</b>). Bir dəfəlik dəvət linki  işçinin e-poçtuna göndərildi. İşçi linkdən keçib parolunu təyin etdikdə hesab avtomatik <b>ACTIVE</b> olacaq.</p>
+      <p class="modal-text" id="account-created-message">Yeni hesab <b>Hesablar</b> cədvəlinə yazıldı (status: <b>INVITED</b>). Bir dəfəlik dəvət linki  işçinin e-poçtuna göndərildi. İşçi linkdən keçib parolunu təyin etdikdə hesab avtomatik <b>ACTIVE</b> olacaq.</p>
       <div class="modal-actions">
         <a href="accounts.html" class="btn btn-primary" style="flex:1;">Hesablar siyahısına qayıt</a>
       </div>
@@ -295,6 +318,13 @@
   // Employee selection auto-fills auth.users fields from the existing hr.employees
   // record — HR/Admin only pick who the account belongs to, they don't re-type the
   // person's identity. Manual entry is only allowed for employee-less system accounts.
+  var ACCOUNT_EMPLOYEES = {
+    "Elvin Qasımov — BAAU-00512 (Maliyyə Şöbəsi)": { dept: "Maliyyə Şöbəsi", position: "Mütəxəssis", username: "elvin.qasimov", email: "elvin.qasimov@baau.edu.az", fullname: "Elvin Qasımov" },
+    "Günel Məmmədova — BAAU-00098 (Kompüter Elmləri Kafedrası)": { dept: "Kompüter Elmləri Kafedrası", position: "Kafedra müdiri", username: "gunel.mammadova", email: "gunel.mammadova@baau.edu.az", fullname: "Günel Məmmədova" },
+    "Vüqar Əliyev — BAAU-00073 (Hüquq Fakültəsi)": { dept: "Hüquq Fakültəsi", position: "Dosent", username: "vuqar.aliyev", email: "vuqar.aliyev@baau.edu.az", fullname: "Vüqar Əliyev" },
+    "Nərmin Səfərova — BAAU-00021 (İqtisadiyyat və İdarəetmə Fakültəsi)": { dept: "İqtisadiyyat və İdarəetmə Fakültəsi", position: "Fakültə rəhbəri", username: "nermin.safarova", email: "nermin.safarova@baau.edu.az", fullname: "Nərmin Səfərova" }
+  };
+
   document.addEventListener("DOMContentLoaded", function () {
     var employeeSelect = document.getElementById("account-employee-select");
     var systemCheckbox = document.getElementById("account-system-checkbox");
@@ -311,9 +341,8 @@
       field.style.background = disabled ? "var(--surface-alt)" : "var(--surface)";
     }
 
-    employeeSelect.addEventListener("change", function () {
-      var opt = employeeSelect.options[employeeSelect.selectedIndex];
-      if (!opt.value) {
+    function applyEmployee(data) {
+      if (!data) {
         deptField.value = "—";
         positionField.value = "—";
         usernameField.value = "";
@@ -324,11 +353,17 @@
         displayNameField.placeholder = "əvvəlcə işçi seçin";
         return;
       }
-      deptField.value = opt.getAttribute("data-dept") || "—";
-      positionField.value = opt.getAttribute("data-position") || "—";
-      usernameField.value = opt.getAttribute("data-username") || "";
-      emailField.value = opt.getAttribute("data-email") || "";
-      displayNameField.value = opt.getAttribute("data-fullname") || "";
+      deptField.value = data.dept || "—";
+      positionField.value = data.position || "—";
+      usernameField.value = data.username || "";
+      emailField.value = data.email || "";
+      displayNameField.value = data.fullname || "";
+    }
+
+    // Datalist gives native type-ahead search; we match the typed text
+    // against our lookup table to auto-fill the read-only fields below.
+    employeeSelect.addEventListener("input", function () {
+      applyEmployee(ACCOUNT_EMPLOYEES[employeeSelect.value.trim()] || null);
     });
 
     systemCheckbox.addEventListener("change", function () {
@@ -337,7 +372,7 @@
       employeeSelect.disabled = isSystem;
       if (isSystem) {
         employeeSelect.value = "";
-        employeeSelect.dispatchEvent(new Event("change"));
+        applyEmployee(null);
       }
 
       setDisabled(usernameField, !isSystem);
@@ -356,6 +391,44 @@
         emailField.placeholder = "əvvəlcə işçi seçin";
         displayNameField.placeholder = "əvvəlcə işçi seçin";
       }
+    });
+
+    // Giriş üsulu: manual password reveals its own field, and the
+    // success message + submit label change to match the chosen method.
+    var linkRadio = document.getElementById("invite-method-link");
+    var manualRadio = document.getElementById("invite-method-manual");
+    var manualField = document.getElementById("manual-password-field");
+    var manualInput = document.getElementById("manual-password-input");
+    var submitBtn = document.getElementById("account-submit-btn");
+    var submitLabel = document.getElementById("account-submit-btn-label");
+    var createdMessage = document.getElementById("account-created-message");
+
+    function syncInviteMethod() {
+      var isManual = manualRadio.checked;
+      manualField.style.display = isManual ? "block" : "none";
+      submitLabel.textContent = isManual ? "Hesab yarat" : "Hesab yarat və dəvət göndər";
+      if (!isManual) {
+        manualInput.value = "";
+        manualInput.style.borderColor = "";
+      }
+    }
+    linkRadio.addEventListener("change", syncInviteMethod);
+    manualRadio.addEventListener("change", syncInviteMethod);
+
+    submitBtn.addEventListener("click", function () {
+      if (manualRadio.checked && !manualInput.value.trim()) {
+        manualInput.style.borderColor = "var(--danger)";
+        manualInput.focus();
+        return;
+      }
+
+      if (manualRadio.checked) {
+        createdMessage.innerHTML = "Yeni hesab <b>Hesablar</b> cədvəlinə yazıldı (status: <b>ACTIVE</b>). Təyin etdiyiniz müvəqqəti parolu işçiyə <b>əl ilə</b> (şifahi, SMS və s.) bildirin — ilk girişdə onu dəyişdirməsi tələb olunacaq.";
+      } else {
+        createdMessage.innerHTML = "Yeni hesab <b>Hesablar</b> cədvəlinə yazıldı (status: <b>INVITED</b>). Bir dəfəlik dəvət linki işçinin e-poçtuna göndərildi. İşçi linkdən keçib parolunu təyin etdikdə hesab avtomatik <b>ACTIVE</b> olacaq.";
+      }
+
+      openModal("modal-account-created");
     });
   });
 </script>
