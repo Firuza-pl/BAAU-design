@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initPageLoader();
   initScrollTop();
   initUserMenu();
+  initNotifMenu();
   initPasswordToggles();
 });
 
@@ -28,6 +29,30 @@ function initUserMenu() {
   });
   document.addEventListener("click", function () {
     document.querySelectorAll("[data-user-menu].open").forEach(function (m) {
+      m.classList.remove("open");
+    });
+  });
+}
+
+/* =========================================================
+   Topbar notification dropdown
+   ========================================================= */
+
+function initNotifMenu() {
+  document.querySelectorAll("[data-notif-toggle]").forEach(function (toggle) {
+    var menu = toggle.parentElement.querySelector("[data-notif-menu]");
+    if (!menu) return;
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var wasOpen = menu.classList.contains("open");
+      document.querySelectorAll("[data-notif-menu].open").forEach(function (m) {
+        m.classList.remove("open");
+      });
+      if (!wasOpen) menu.classList.add("open");
+    });
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll("[data-notif-menu].open").forEach(function (m) {
       m.classList.remove("open");
     });
   });

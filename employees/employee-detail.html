@@ -121,10 +121,43 @@
       </div>
 
       <div class="topbar-actions">
-        <button class="icon-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
-          <span class="dot"></span>
-        </button>
+        <div class="notif-wrap">
+          <button class="icon-btn" data-notif-toggle>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            <span class="dot"></span>
+          </button>
+          <div class="notif-menu" data-notif-menu>
+            <div class="notif-menu-header">Bildirişlər <span class="badge-count">3</span></div>
+            <a href="../change-requests/change-requests.html" class="notif-item">
+              <div class="notif-item-icon warning">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div>
+                <div class="notif-item-title">3 dəyişiklik sorğusu gözləyir</div>
+                <div class="notif-item-sub">Aysel Quliyeva, Tural Hacıyev, Elçin Bağırov</div>
+              </div>
+            </a>
+            <a href="../orders/orders.html" class="notif-item">
+              <div class="notif-item-icon navy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              </div>
+              <div>
+                <div class="notif-item-title">Əmr №342 təsdiq gözləyir</div>
+                <div class="notif-item-sub">İşə qəbul — Elvin Qasımov</div>
+              </div>
+            </a>
+            <a href="../accounts/accounts.html" class="notif-item">
+              <div class="notif-item-icon success">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div>
+                <div class="notif-item-title">Yeni hesab aktivləşdirildi</div>
+                <div class="notif-item-sub">tural.haciyev — status ACTIVE oldu</div>
+              </div>
+            </a>
+            <a href="../change-requests/change-requests.html" class="notif-menu-footer">Hamısına bax</a>
+          </div>
+        </div>
         <div class="topbar-userchip">
           <div class="avatar avatar-sm">RE</div>
           <div>
