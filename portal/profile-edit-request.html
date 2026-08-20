@@ -99,6 +99,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
             Təhsil
           </button>
+          <button class="tab-btn" data-tab-target="science">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+            Elmi fəaliyyət
+          </button>
           <button class="tab-btn" data-tab-target="family">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             Ailə
@@ -169,19 +173,138 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
                 </button>
                 <div class="form-grid cols-3">
-                  <div class="field form-span-2"><label>Təhsil müəssisəsi</label><input class="input" type="text" placeholder="məs. Bakı Dövlət Universiteti" /></div>
                   <div class="field">
-                    <label>Təhsil dərəcəsi</label>
-                    <select class="input"><option>Bakalavr</option><option>Magistr</option><option>Doktorantura</option></select>
+                    <label>Təhsil pilləsi</label>
+                    <select class="input">
+                      <option value="">Seçin</option>
+                      <option>Orta ixtisas / peşə təhsili</option>
+                      <option>Ali təhsil</option>
+                      <option>Magistratura</option>
+                      <option>Doktorantura</option>
+                    </select>
                   </div>
-                  <div class="field form-span-2"><label>İxtisas</label><input class="input" type="text" placeholder="məs. Maliyyə" /></div>
+                  <div class="field">
+                    <label>Təhsil səviyyəsi</label>
+                    <select class="input">
+                      <option value="">Seçin</option>
+                      <option>Subbakalavr</option>
+                      <option>Bakalavr</option>
+                      <option>Mütəxəssis</option>
+                      <option>Magistr</option>
+                      <option>Fəlsəfə doktoru (dr.)</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Dərəcə</label>
+                    <select class="input"><option value="">Seçin</option><option>Bakalavr</option><option>Magistr</option></select>
+                  </div>
+                  <div class="field form-span-2"><label>Təhsil müəssisəsi</label><input class="input" type="text" placeholder="məs. Bakı Dövlət Universiteti" /></div>
+                  <div class="field"><label>Təhsilalma forması</label>
+                    <select class="input"><option value="">Seçin</option><option>Əyani</option><option>Qiyabi</option><option>Distant</option></select>
+                  </div>
+                  <div class="field form-span-2"><label>İxtisas / ixtisaslaşma</label><input class="input" type="text" placeholder="məs. Maliyyə" /></div>
                   <div class="field"><label>Bitirmə ili</label><input class="input" type="number" placeholder="2026" /></div>
+                  <div class="field form-span-2"><label>Kvalifikasiya adı</label><input class="input" type="text" placeholder="məs. İqtisadçı-menecer" /></div>
+                  <div class="field"><label>Sənəd növü</label>
+                    <select class="input"><option value="">Seçin</option><option>Diplom</option><option>Attestat</option><option>Şəhadətnamə</option></select>
+                  </div>
+                  <div class="field"><label>Sənəd seriya / nömrə</label><input class="input" type="text" placeholder="AZ 0041872" /></div>
+                  <div class="field"><label>Verilmə tarixi</label><input class="input" type="date" /></div>
+                  <div class="field">
+                    <label>Sənəd skanı</label>
+                    <div class="dropzone" style="padding:10px 12px; display:flex; align-items:center; gap:8px; text-align:left;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin:0; flex-shrink:0; width:18px; height:18px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+                      <span>Yükləmək üçün klikləyin</span>
+                    </div>
+                  </div>
+                  <div class="field form-span-2"><label>Xaricdə alınıb, tanınma (nostrifikasiya) sənəd nömrəsi</label><input class="input" type="text" placeholder="yalnız xarici təhsil üçün" /></div>
                 </div>
               </div>
             </div>
             <button type="button" class="add-row-btn" data-repeat-add="education-rows">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
               Başqa təhsil məlumatı əlavə et
+            </button>
+          </div>
+        </div>
+
+        <!-- Elmi fəaliyyət -->
+        <div class="tab-panel" data-tab-panel="science">
+          <div class="role-note mb-18">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>Elmi dərəcəniz (Fəlsəfə doktoru / Elmlər doktoru) və ya elmi adınız (Dosent / Professor) varsa, buradan əlavə edin. Bu, adi təhsil qeydlərinizdən ayrıdır.</div>
+          </div>
+
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+              Elmi dərəcə
+            </div>
+            <div id="science-degree-rows">
+              <div class="repeat-card">
+                <button type="button" class="icon-btn btn-sm repeat-card-remove" style="width:30px;height:30px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                </button>
+                <div class="form-grid cols-3">
+                  <div class="field">
+                    <label>Elmi dərəcə növü</label>
+                    <select class="input"><option value="">Seçin</option><option>Fəlsəfə doktoru</option><option>Elmlər doktoru</option></select>
+                  </div>
+                  <div class="field"><label>Elmi ixtisas</label><input class="input" type="text" placeholder="məs. İqtisadiyyat" /></div>
+                  <div class="field"><label>Müdafiə ili</label><input class="input" type="number" placeholder="2020" /></div>
+                  <div class="field form-span-3"><label>Dissertasiya mövzusu</label><input class="input" type="text" placeholder="məs. Azərbaycanın bank sektorunda risk idarəetməsi..." /></div>
+                  <div class="field form-span-2"><label>Diplomu verən orqan</label><input class="input" type="text" placeholder="məs. Ali Attestasiya Komissiyası" /></div>
+                  <div class="field"><label>Diplom seriya / nömrə</label><input class="input" type="text" placeholder="DR №004821" /></div>
+                  <div class="field">
+                    <label>Diplom sənədi</label>
+                    <div class="dropzone" style="padding:10px 12px; display:flex; align-items:center; gap:8px; text-align:left;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin:0; flex-shrink:0; width:18px; height:18px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+                      <span>Yükləmək üçün klikləyin</span>
+                    </div>
+                  </div>
+                  <div class="field form-span-2"><label>Xaricdə alınıb, tanınma sənədi (nostrifikasiya)</label><input class="input" type="text" placeholder="yalnız xaricdə alınıbsa — sənəd nömrəsi" /></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="add-row-btn" data-repeat-add="science-degree-rows">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Başqa elmi dərəcə əlavə et
+            </button>
+          </div>
+
+          <div class="card card-pad" style="margin-top:18px;">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+              Elmi ad
+            </div>
+            <div id="science-title-rows">
+              <div class="repeat-card">
+                <button type="button" class="icon-btn btn-sm repeat-card-remove" style="width:30px;height:30px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                </button>
+                <div class="form-grid cols-3">
+                  <div class="field">
+                    <label>Elmi ad növü</label>
+                    <select class="input"><option value="">Seçin</option><option>Dosent</option><option>Professor</option></select>
+                  </div>
+                  <div class="field"><label>Elmi ixtisas</label><input class="input" type="text" placeholder="məs. Hüquq" /></div>
+                  <div class="field"><label>Attestasiya tarixi</label><input class="input" type="date" /></div>
+                  <div class="field form-span-2"><label>Təşkilat / kafedra</label><input class="input" type="text" placeholder="məs. Bakı Ali Neft Məktəbi, Hüquq Kafedrası" /></div>
+                  <div class="field"><label>Attestat seriya / nömrə</label><input class="input" type="text" placeholder="AT №001943" /></div>
+                  <div class="field">
+                    <label>Attestat sənədi</label>
+                    <div class="dropzone" style="padding:10px 12px; display:flex; align-items:center; gap:8px; text-align:left;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin:0; flex-shrink:0; width:18px; height:18px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+                      <span>Yükləmək üçün klikləyin</span>
+                    </div>
+                  </div>
+                  <div class="field form-span-2"><label>Xaricdə alınıb, tanınma sənədi (nostrifikasiya)</label><input class="input" type="text" placeholder="yalnız xaricdə alınıbsa — sənəd nömrəsi" /></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="add-row-btn" data-repeat-add="science-title-rows">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Başqa elmi ad əlavə et
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>İşçilər — BAAU HR</title>
+<title>Elmi fəaliyyət — BAAU HR</title>
 <link rel="stylesheet" href="../assets/css/style.css" />
 <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 </head>
@@ -28,7 +28,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
           İdarə paneli
         </a>
-        <a class="nav-item active" href="employees.html">
+        <a class="nav-item" href="../employees/employees.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           İşçilər
           <span class="badge-count">1,248</span>
@@ -53,13 +53,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
           Təhsil məlumatları
         </a>
+        <a class="nav-item active" href="science.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          Elmi fəaliyyət
+        </a>
         <a class="nav-item" href="#">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
           Hərbi qeydiyyat
-        </a>
-        <a class="nav-item" href="../science/science.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
-          Elmi fəaliyyət
         </a>
       </div>
 
@@ -111,53 +111,16 @@
   <div class="main">
     <header class="topbar">
       <div class="topbar-title">
-        <h1>İşçilər</h1>
-        <div class="breadcrumb"><a href="../dashboard/dashboard.html">BAAU HR</a> &nbsp;/&nbsp; İşçilər</div>
+        <h1>Elmi fəaliyyət</h1>
+        <div class="breadcrumb"><a href="../dashboard/dashboard.html">BAAU HR</a> &nbsp;/&nbsp; Elmi fəaliyyət</div>
       </div>
 
       <div class="topbar-search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" placeholder="İşçi, vəzifə, şöbə axtar..." />
+        <input type="text" placeholder="İşçi, başlıq, nəşr axtar..." />
       </div>
 
       <div class="topbar-actions">
-        <div class="notif-wrap">
-          <button class="icon-btn" data-notif-toggle>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
-            <span class="dot"></span>
-          </button>
-          <div class="notif-menu" data-notif-menu>
-            <div class="notif-menu-header">Bildirişlər <span class="badge-count">3</span></div>
-            <a href="../change-requests/change-requests.html" class="notif-item">
-              <div class="notif-item-icon warning">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              </div>
-              <div>
-                <div class="notif-item-title">3 dəyişiklik sorğusu gözləyir</div>
-                <div class="notif-item-sub">Aysel Quliyeva, Tural Hacıyev, Elçin Bağırov</div>
-              </div>
-            </a>
-            <a href="../orders/orders.html" class="notif-item">
-              <div class="notif-item-icon navy">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-              </div>
-              <div>
-                <div class="notif-item-title">Əmr №342 təsdiq gözləyir</div>
-                <div class="notif-item-sub">İşə qəbul — Elvin Qasımov</div>
-              </div>
-            </a>
-            <a href="../accounts/accounts.html" class="notif-item">
-              <div class="notif-item-icon success">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <div>
-                <div class="notif-item-title">Yeni hesab aktivləşdirildi</div>
-                <div class="notif-item-sub">tural.haciyev — status ACTIVE oldu</div>
-              </div>
-            </a>
-            <a href="../change-requests/change-requests.html" class="notif-menu-footer">Hamısına bax</a>
-          </div>
-        </div>
         <div class="topbar-userchip">
           <div class="avatar avatar-sm">RE</div>
           <div>
@@ -170,30 +133,36 @@
 
     <div class="content">
 
+      <div class="role-note mb-18">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <div>Bu siyahı işçilərin <b>elmi dərəcə</b> (employee_scientific_degrees — Fəlsəfə doktoru, Elmlər doktoru) və <b>elmi ad</b> (employee_scientific_titles — Dosent, Professor) qeydlərini bir yerdə göstərir. Bunlar işçinin adi <b>təhsil</b> qeydlərindən (education_records) ayrıdır. İşçilər öz elmi fəaliyyət məlumatını
+           <b>Dəyişiklik sorğusu</b> ilə göndərir, siz təsdiqləyəndə buraya yazılır. Köhnə bazada olan qeydlərin düzəlişi üçün birbaşa <b>"Yeni qeyd"</b> düyməsindən də əlavə edə bilərsiniz.</div>
+      </div>
+
       <div class="stat-grid" style="grid-template-columns:repeat(4,1fr); margin-bottom:20px;">
         <div class="stat-tile">
           <div class="stat-tile-top">
-            <div class="stat-icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div class="stat-icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
           </div>
-          <div><div class="stat-value">1,248</div><div class="stat-label">Ümumi işçi</div></div>
+          <div><div class="stat-value">187</div><div class="stat-label">Ümumi qeyd</div></div>
         </div>
         <div class="stat-tile">
           <div class="stat-tile-top">
-            <div class="stat-icon success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="stat-icon info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
           </div>
-          <div><div class="stat-value">1,184</div><div class="stat-label">İşləyir</div></div>
+          <div><div class="stat-value">64</div><div class="stat-label">Fəlsəfə doktoru</div></div>
         </div>
         <div class="stat-tile">
           <div class="stat-tile-top">
-            <div class="stat-icon warning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <div class="stat-icon success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
           </div>
-          <div><div class="stat-value">64</div><div class="stat-label">Məzuniyyətdə</div></div>
+          <div><div class="stat-value">11</div><div class="stat-label">Elmlər doktoru</div></div>
         </div>
         <div class="stat-tile">
           <div class="stat-tile-top">
-            <div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div>
+            <div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
           </div>
-          <div><div class="stat-value">37</div><div class="stat-label">Bu il azad olunub</div></div>
+          <div><div class="stat-value">112</div><div class="stat-label">Dosent / Professor</div></div>
         </div>
       </div>
 
@@ -202,37 +171,22 @@
           <div class="table-toolbar-left">
             <div class="filter-input" style="position:relative;">
               <svg style="position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--text-muted);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-              <input class="input" data-table-search style="padding-left:32px; font-size:12.5px; padding-top:8px; padding-bottom:8px;" type="text" placeholder="Ad, işçi kodu axtar..." />
+              <input class="input" data-table-search style="padding-left:32px; font-size:12.5px; padding-top:8px; padding-bottom:8px;" type="text" placeholder="İşçi, elmi ixtisas axtar..." />
             </div>
             <select class="select-chip">
-              <option>Bütün bölmələr</option>
-              <option>İqtisadiyyat və İdarəetmə Fakültəsi</option>
-              <option>Kompüter Elmləri Kafedrası</option>
-              <option>Maliyyə Şöbəsi</option>
-              <option>Hüquq Fakültəsi</option>
-            </select>
-            <select class="select-chip">
-              <option>Bütün statuslar</option>
-              <option>İşləyir</option>
-              <option>Məzuniyyətdə</option>
-              <option>İşdən azad olunub</option>
-            </select>
-            <select class="select-chip">
-              <option>Ştat forması</option>
-              <option>Ştat</option>
-              <option>Daxili əvəzçilik</option>
-              <option>Kənar əvəzçilik</option>
-              <option>Saathesabı</option>
+              <option>Bütün qeydlər</option>
+              <option>Elmi dərəcə</option>
+              <option>Elmi ad</option>
             </select>
           </div>
           <div class="table-toolbar-right">
             <button class="btn btn-outline btn-sm">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-             Excel 
+              Excel
             </button>
-            <a href="employee-create.html" class="btn btn-accent btn-sm">
+            <a href="science-create.html" class="btn btn-accent btn-sm">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
-              Yeni işçi
+              Yeni qeyd
             </a>
           </div>
         </div>
@@ -242,98 +196,17 @@
             <thead>
               <tr>
                 <th>İşçi</th>
-                <th>Struktur bölmə</th>
-                <th>Vəzifə</th>
-                <th>Ştat forması</th>
-                <th>Status</th>
-                <th>İşə qəbul tarixi</th>
+                <th>Qeyd növü</th>
+                <th>Ad</th>
+                <th>Elmi ixtisas</th>
+                <th>Təşkilat</th>
+                <th>İl</th>
                 <th style="text-align:right;">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
 
-              <tr>
-                <td>
-                  <div class="cell-person">
-                    <div class="avatar avatar-sm">FP</div>
-                    <div>
-                      <div class="cell-person-name">Firuzə Poladzadə Cəfərli</div>
-                      <div class="cell-person-sub">İşçi kodu: BAAU-00214</div>
-                    </div>
-                  </div>
-                </td>
-                <td>İcra aparatı </td>
-                <td>Mütəxəssis</td>
-                <td><span class="tag">Ştat</span></td>
-                <td><span class="badge badge-success">İşləyir</span></td>
-                <td>12.03.2019</td>
-                <td>
-                  <div class="cell-actions">
-                    <a href="employee-detail.html" class="icon-btn btn-sm" style="width:32px;height:32px;">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </a>
-                                   <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-employee" data-modal-label="Aysel Quliyeva">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="cell-person">
-                    <div class="avatar avatar-sm">AC</div>
-                    <div>
-                      <div class="cell-person-name">Ashraf Cəfərli</div>
-                      <div class="cell-person-sub">İşçi kodu: BAAU-00187</div>
-                    </div>
-                  </div>
-                </td>
-                <td>Komputer Elmləri</td>
-                <td>Muellim</td>
-                <td><span class="tag">Ştat</span></td>
-                <td><span class="badge badge-success">İşləyir</span></td>
-                <td>03.09.2015</td>
-                <td>
-                  <div class="cell-actions">
-                    <a href="employee-detail.html" class="icon-btn btn-sm" style="width:32px;height:32px;">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </a>
-                                 <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-employee" data-modal-label="Tural Hacıyev">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="cell-person">
-                    <div class="avatar avatar-sm">EB</div>
-                    <div>
-                      <div class="cell-person-name">Elçin Bağırov</div>
-                      <div class="cell-person-sub">İşçi kodu: BAAU-00302</div>
-                    </div>
-                  </div>
-                </td>
-                <td>Hüquq fakultəsi</td>
-                <td>Müəllim</td>
-                <td><span class="tag">Ştat</span></td>
-                <td><span class="badge badge-warning">Məzuniyyətdə</span></td>
-                <td>22.01.2021</td>
-                <td>
-                  <div class="cell-actions">
-                    <a href="employee-detail.html" class="icon-btn btn-sm" style="width:32px;height:32px;">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </a>
-                                <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-employee" data-modal-label="Elçin Bağırov">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
+              <tr data-employee="Günel Məmmədova" data-code="BAAU-00098" data-kind="Elmi dərəcə" data-name="Fəlsəfə doktoru" data-specialty="Kompüter elmləri" data-second-specialty="—" data-organization="AMEA İnformasiya Texnologiyaları İnstitutu" data-detail="Maşın öyrənməsi metodları ilə iqtisadi proqnozlaşdırma" data-year="2024" data-doc="DR №004821">
                 <td>
                   <div class="cell-person">
                     <div class="avatar avatar-sm">GM</div>
@@ -343,24 +216,78 @@
                     </div>
                   </div>
                 </td>
-                <td>Kompüter Elmləri Kafedrası</td>
-                <td>Kafedra müdiri</td>
-                <td><span class="tag">Ştat</span></td>
-                <td><span class="badge badge-success">İşləyir</span></td>
-                <td>14.09.2011</td>
+                <td><span class="tag">Elmi dərəcə</span></td>
+                <td>Fəlsəfə doktoru</td>
+                <td>Kompüter elmləri</td>
+                <td>AMEA İnformasiya Texnologiyaları İnstitutu</td>
+                <td>2024</td>
                 <td>
                   <div class="cell-actions">
-                    <a href="employee-detail.html" class="icon-btn btn-sm" style="width:32px;height:32px;">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-science">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </a>
-                              <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-employee" data-modal-label="Günel Məmmədova">
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-science" data-modal-label="Günel Məmmədova — Fəlsəfə doktoru">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
                     </button>
                   </div>
                 </td>
               </tr>
 
-              <tr>
+              <tr data-employee="Vüqar Əliyev" data-code="BAAU-00073" data-kind="Elmi ad" data-name="Dosent" data-specialty="Hüquq" data-second-specialty="—" data-organization="Bakı Ali Neft Məktəbi" data-detail="Hüquq Kafedrası" data-year="2023" data-doc="AT №001943">
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">VƏ</div>
+                    <div>
+                      <div class="cell-person-name">Vüqar Əliyev</div>
+                      <div class="cell-person-sub">İşçi kodu: BAAU-00073</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag">Elmi ad</span></td>
+                <td>Dosent</td>
+                <td>Hüquq</td>
+                <td>Bakı Ali Neft Məktəbi</td>
+                <td>2023</td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-science">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-science" data-modal-label="Vüqar Əliyev — Dosent">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr data-employee="Aysel Quliyeva" data-code="BAAU-00214" data-kind="Elmi dərəcə" data-name="Fəlsəfə doktoru" data-specialty="İqtisadiyyat" data-second-specialty="Maliyyə" data-organization="AMEA İqtisadiyyat İnstitutu" data-detail="Azərbaycanın bank sektorunda risk idarəetməsi" data-year="2022" data-doc="DR №003174">
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">AQ</div>
+                    <div>
+                      <div class="cell-person-name">Aysel Quliyeva</div>
+                      <div class="cell-person-sub">İşçi kodu: BAAU-00214</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag">Elmi dərəcə</span></td>
+                <td>Fəlsəfə doktoru</td>
+                <td>İqtisadiyyat</td>
+                <td>AMEA İqtisadiyyat İnstitutu</td>
+                <td>2022</td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-science">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-science" data-modal-label="Aysel Quliyeva — Fəlsəfə doktoru">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr data-employee="Kamran Hüseynov" data-code="BAAU-00056" data-kind="Elmi ad" data-name="Professor" data-specialty="Riyaziyyat" data-second-specialty="—" data-organization="Bakı Dövlət Universiteti" data-detail="Riyaziyyat və Mexanika Kafedrası" data-year="2021" data-doc="AT №001512">
                 <td>
                   <div class="cell-person">
                     <div class="avatar avatar-sm">KH</div>
@@ -370,24 +297,24 @@
                     </div>
                   </div>
                 </td>
-                <td>Maliyyə Şöbəsi</td>
-                <td>Mütəxəssis</td>
-                <td><span class="tag">Ştat</span></td>
-                <td><span class="badge badge-danger">İşdən azad</span></td>
-                <td>08.05.2017</td>
+                <td><span class="tag">Elmi ad</span></td>
+                <td>Professor</td>
+                <td>Riyaziyyat</td>
+                <td>Bakı Dövlət Universiteti</td>
+                <td>2021</td>
                 <td>
                   <div class="cell-actions">
-                    <a href="employee-detail.html" class="icon-btn btn-sm" style="width:32px;height:32px;">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-science">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </a>
-                                  <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-employee" data-modal-label="Kamran Hüseynov">
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-science" data-modal-label="Kamran Hüseynov — Professor">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
                     </button>
                   </div>
                 </td>
               </tr>
 
-              <tr>
+              <tr data-employee="Sevinc Nəsirova" data-code="BAAU-00411" data-kind="Elmi dərəcə" data-name="Elmlər doktoru" data-specialty="Pedaqogika" data-second-specialty="—" data-organization="AAK yanında Dissertasiya Şurası" data-detail="Ali məktəbdə riyaziyyat tədrisinin metodikası" data-year="2020" data-doc="DR №002890">
                 <td>
                   <div class="cell-person">
                     <div class="avatar avatar-sm">SN</div>
@@ -397,17 +324,17 @@
                     </div>
                   </div>
                 </td>
-                <td>Kadrlar Şöbəsi</td>
-                <td>Mütəxəssis</td>
-                <td><span class="tag">Daxili əvəzçilik</span></td>
-                <td><span class="badge badge-success">İşləyir</span></td>
-                <td>01.02.2023</td>
+                <td><span class="tag">Elmi dərəcə</span></td>
+                <td>Elmlər doktoru</td>
+                <td>Pedaqogika</td>
+                <td>AAK yanında Dissertasiya Şurası</td>
+                <td>2020</td>
                 <td>
                   <div class="cell-actions">
-                    <a href="employee-detail.html" class="icon-btn btn-sm" style="width:32px;height:32px;">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-science">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </a>
-                                      <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-employee" data-modal-label="Sevinc Nəsirova">
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-science" data-modal-label="Sevinc Nəsirova — Elmlər doktoru">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
                     </button>
                   </div>
@@ -419,7 +346,7 @@
         </div>
 
         <div class="table-footer">
-          <div class="muted">1,248 nəticədən 1–6 göstərilir</div>
+          <div class="muted">187 nəticədən 1–5 göstərilir</div>
           <div class="pagination">
             <button class="page-btn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -428,7 +355,7 @@
             <button class="page-btn">2</button>
             <button class="page-btn">3</button>
             <button class="page-btn">…</button>
-            <button class="page-btn">208</button>
+            <button class="page-btn">38</button>
             <button class="page-btn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
             </button>
@@ -440,25 +367,103 @@
   </div>
 </div>
 
+<!-- VIEW SCIENCE MODAL -->
+<div class="modal-overlay" id="modal-view-science" data-modal-close>
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <h3 id="view-science-employee"></h3>
+      <button type="button" class="modal-close" data-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body text-left">
+      <div class="info-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="info-item">
+          <div class="info-label">İşçi kodu</div>
+          <div class="info-value" id="view-science-code"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Qeyd növü</div>
+          <div class="info-value" id="view-science-kind"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Ad</div>
+          <div class="info-value" id="view-science-name"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Elmi ixtisas</div>
+          <div class="info-value" id="view-science-specialty"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">İkinci elmi ixtisas</div>
+          <div class="info-value" id="view-science-second-specialty"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Təşkilat</div>
+          <div class="info-value" id="view-science-organization"></div>
+        </div>
+        <div class="info-item form-span-2" style="grid-column:1 / -1;">
+          <div class="info-label" id="view-science-detail-label">Dissertasiya mövzusu</div>
+          <div class="info-value" id="view-science-detail"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">İl</div>
+          <div class="info-value" id="view-science-year"></div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Sənəd nömrəsi</div>
+          <div class="info-value" id="view-science-doc"></div>
+        </div>
+      </div>
+      <div class="modal-actions" style="margin-top:20px;">
+        <button type="button" class="btn btn-outline" style="flex:1;" data-modal-close>Bağla</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- DELETE CONFIRM MODAL -->
-<div class="modal-overlay" id="modal-delete-employee" data-modal-close>
+<div class="modal-overlay" id="modal-delete-science" data-modal-close>
   <div class="modal-box">
     <div class="modal-body">
       <div class="modal-icon danger">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
       </div>
-      <h3 class="modal-title">İşçini silmək istədiyinizə əminsiniz?</h3>
+      <h3 class="modal-title">Elmi fəaliyyət qeydini silmək istədiyinizə əminsiniz?</h3>
       <p class="modal-text">
-        <b data-modal-label-target>Bu işçi</b> və ona aid bütün əlaqəli qeydlər (əmək fəaliyyəti, təhsil, məzuniyyət, sənədlər) sistemdən həmişəlik silinəcək. Bu əməliyyat geri qaytarılmır.
+        <b data-modal-label-target>Bu qeyd</b> sistemdən həmişəlik silinəcək. Bu əməliyyat geri qaytarılmır.
       </p>
       <div class="modal-actions">
         <button type="button" class="btn btn-outline" data-modal-close>Ləğv et</button>
-        <button type="button" class="btn btn-accent" data-modal-confirm-delete data-success-message="İşçi silindi.">Bəli, sil</button>
+        <button type="button" class="btn btn-accent" data-modal-confirm-delete data-success-message="Elmi fəaliyyət qeydi silindi.">Bəli, sil</button>
       </div>
     </div>
   </div>
 </div>
 
 <script src="../assets/js/app.js"></script>
+<script>
+  // "Bax" fills the science-detail modal from the clicked row's own data attributes.
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('[data-modal-open="modal-view-science"]').forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var row = btn.closest("tr");
+        if (!row) return;
+        document.getElementById("view-science-employee").textContent = row.dataset.employee;
+        document.getElementById("view-science-code").textContent = row.dataset.code;
+        document.getElementById("view-science-kind").textContent = row.dataset.kind;
+        document.getElementById("view-science-name").textContent = row.dataset.name;
+        document.getElementById("view-science-specialty").textContent = row.dataset.specialty;
+        document.getElementById("view-science-second-specialty").textContent = row.dataset.secondSpecialty;
+        document.getElementById("view-science-organization").textContent = row.dataset.organization;
+        document.getElementById("view-science-detail-label").textContent =
+          row.dataset.kind === "Elmi ad" ? "Kafedra / şöbə" : "Dissertasiya mövzusu";
+        document.getElementById("view-science-detail").textContent = row.dataset.detail;
+        document.getElementById("view-science-year").textContent = row.dataset.year;
+        document.getElementById("view-science-doc").textContent = row.dataset.doc;
+      });
+    });
+  });
+</script>
 </body>
 </html>

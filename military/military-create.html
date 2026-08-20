@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yeni işçi — BAAU HR</title>
+<title>Yeni hərbi qeydiyyat kartı — BAAU HR</title>
 <link rel="stylesheet" href="../assets/css/style.css" />
 <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 </head>
@@ -28,7 +28,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
           İdarə paneli
         </a>
-        <a class="nav-item active" href="employees.html">
+        <a class="nav-item" href="../employees/employees.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           İşçilər
           <span class="badge-count">1,248</span>
@@ -53,13 +53,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
           Təhsil məlumatları
         </a>
-        <a class="nav-item" href="#">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
-          Hərbi qeydiyyat
-        </a>
         <a class="nav-item" href="../science/science.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
           Elmi fəaliyyət
+        </a>
+        <a class="nav-item active" href="military.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+          Hərbi qeydiyyat
         </a>
       </div>
 
@@ -111,8 +111,8 @@
   <div class="main">
     <header class="topbar">
       <div class="topbar-title">
-        <h1>Yeni işçi</h1>
-        <div class="breadcrumb"><a href="../dashboard/dashboard.html">BAAU HR</a> / <a href="employees.html">İşçilər</a> / Yeni işçi</div>
+        <h1>Yeni hərbi qeydiyyat kartı</h1>
+        <div class="breadcrumb"><a href="../dashboard/dashboard.html">BAAU HR</a> / <a href="military.html">Hərbi qeydiyyat</a> / Yeni qeyd</div>
       </div>
       <div class="topbar-actions">
         <div class="topbar-userchip">
@@ -129,59 +129,141 @@
 
       <div class="page-head">
         <div>
-          <h2>Yeni işçi əlavə et</h2>
-          <div class="muted"> İş yeri, vəzifə və müqavilə buraya daxil deyil — onlar "İşə qəbul" əmri təsdiqlənəndə yaranır.</div>
+          <h2>Hərbi qeydiyyat kartı əlavə et</h2>
+          <div class="muted">Hər işçinin yalnız bir hərbi kartı ola bilər (employee_military — employee_id UNIQUE).</div>
         </div>
         <div class="page-head-actions">
-          <a href="employees.html" class="btn btn-outline">Ləğv et</a>
-          <button type="button" class="btn btn-accent" data-modal-open="modal-created">
+          <a href="military.html" class="btn btn-outline">Ləğv et</a>
+          <button type="button" class="btn btn-accent" id="military-submit-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
             Yadda saxla
           </button>
         </div>
       </div>
 
-      <div class="role-note mb-18">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-        <div>
-          Bu formada yalnız işçinin <b>identifikasiyası</b> yaranır. Digər addımlar ayrıca, öz vaxtında baş verir:
-          <br />1) hesab açıb dəvət göndərin → 2) işçi öz şəxsi/əlaqə/təhsil məlumatını sorğu kimi göndərir, siz təsdiqləyirsiniz → 3) <b>"İşə qəbul" əmrini</b> siz yaradıb təsdiqləyəndə struktur bölmə, vəzifə, müqavilə və işə başlama tarixi həmin an yazılır
+      <div class="card card-pad">
+        <div class="subsection-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+          İşçi və hərbi bilet
         </div>
-      </div>
-
-      <div class="role-note mb-18" id="from-candidate-note" style="display:none;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        <div>Bu qeyd <b>Namizədlər</b> siyahısından işə qəbul üçün seçilib — ad/soyad oradan ötürülüb, qalan sahələri təsdiqləyin.</div>
+        <div class="form-grid cols-3">
+          <div class="field form-span-2">
+            <label>İşçi <span class="req">*</span></label>
+            <div class="input-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+              <input class="input" type="text" list="military-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." />
+            </div>
+            <datalist id="military-employee-list">
+              <option value="Tural Hacıyev — BAAU-00187"></option>
+              <option value="Elçin Bağırov — BAAU-00302"></option>
+              <option value="Kamran Hüseynov — BAAU-00056"></option>
+            </datalist>
+          </div>
+          <div class="field">
+            <label>Hərbi bilet nömrəsi</label>
+            <input class="input" type="text" placeholder="AZ №118422" />
+          </div>
+          <div class="field">
+            <label>Hərbi bilet verilmə tarixi</label>
+            <input class="input" type="date" />
+          </div>
+          <div class="field">
+            <label>Xidmətə başlama tarixi</label>
+            <input class="input" type="date" />
+          </div>
+          <div class="field">
+            <label>Xidmətin bitmə tarixi</label>
+            <input class="input" type="date" />
+          </div>
+        </div>
       </div>
 
       <div class="card card-pad">
         <div class="subsection-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-          Əsas identifikasiya 
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+          Hərbi status
         </div>
         <div class="form-grid cols-3">
-          <div class="field"><label>Ad <span class="req">*</span></label><input class="input" type="text" id="new-employee-ad" placeholder="Aysel" /></div>
-          <div class="field"><label>Soyad <span class="req">*</span></label><input class="input" type="text" id="new-employee-soyad" placeholder="Quliyeva" /></div>
-          <div class="field"><label>Ata adı</label><input class="input" type="text" placeholder="Vüqar qızı" /></div>
-
           <div class="field">
-            <label>Əvvəlki soyad</label>
-            <input class="input" type="text" placeholder="soyad dəyişikliyi olubsa" />
+            <label>Hərbi heyət növü <span class="req">*</span></label>
+            <select class="input">
+              <option value="">Seçin</option>
+              <option>Çağırışçı</option>
+              <option>Ehtiyatda</option>
+              <option>Hərbi xidmətdə</option>
+            </select>
           </div>
           <div class="field">
-            <label>İşçi kodu</label>
-            <input class="input" type="text" value="Avtomatik: BAAU-00xxx" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
-            <div class="field-hint">Avtomatik yaranır</div>
+            <label>Hərbi rütbə</label>
+            <select class="input">
+              <option value="">Seçin</option>
+              <option>Sıravi</option>
+              <option>Kiçik leytenant</option>
+              <option>Leytenant</option>
+              <option>Baş leytenant</option>
+              <option>Kapitan</option>
+            </select>
           </div>
           <div class="field">
-            <label>Şəkil</label>
-            <div class="dropzone" style="padding:10px 12px; display:flex; align-items:center; gap:8px; text-align:left;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin:0; flex-shrink:0; width:18px; height:18px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
-              <span>Yükləmək üçün klikləyin</span>
-            </div>
+            <label>Qeydiyyat qrupu</label>
+            <select class="input">
+              <option value="">Seçin</option>
+              <option>Çağırışçı</option>
+              <option>Hərbi vəzifəli</option>
+              <option>Zabit heyəti</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Qeydiyyat kateqoriyası <span class="req">*</span></label>
+            <select class="input">
+              <option value="">Seçin</option>
+              <option>I kateqoriya</option>
+              <option>II kateqoriya</option>
+            </select>
+            <div class="field-hint">I — hərbi xidməti tam keçmiş / döyüş iştirakçısı. II — xidmət keçməmiş hərbi vəzifəlilər və ehtiyatda olan qadınlar.</div>
+          </div>
+          <div class="field">
+            <label>Hərbi ixtisas nömrəsi</label>
+            <input class="input" type="text" placeholder="məs. 021" />
+          </div>
+          <div class="field">
+            <label>Hərbi vəzifə kodu</label>
+            <input class="input" type="text" placeholder="məs. ЗС-14" />
+          </div>
+          <div class="field form-span-3">
+            <label>Hərbi ixtisas adı</label>
+            <input class="input" type="text" placeholder="məs. Rabitə" />
+          </div>
+          <div class="field form-span-2">
+            <label>Yararlılıq statusu</label>
+            <input class="input" type="text" placeholder="məs. Sağlamdır, xidmətə yararlıdır" />
+          </div>
+          <div class="field">
+            <label>Əmr nömrəsi</label>
+            <input class="input" type="text" placeholder="məs. №214-hb" />
           </div>
         </div>
-        <div class="field-hint" style="margin-top:4px;">Doğum tarixi, cins, vətəndaşlıq, FİN kimi şəxsi məlumatlar işçinin özü tərəfindən, hesab aktivləşdikdən sonra daxil edilir.</div>
+      </div>
+
+      <div class="card card-pad">
+        <div class="subsection-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Qeydiyyat orqanı
+        </div>
+        <div class="form-grid cols-3">
+          <div class="field form-span-2">
+            <label>Qeydiyyat orqanı</label>
+            <input class="input" type="text" placeholder="məs. Bakı Şəhər Səfərbərlik və Hərbi Xidmətə Çağırış üzrə Baş İdarəsi" />
+          </div>
+          <div class="field">
+            <label>Qeydiyyat tarixi</label>
+            <input class="input" type="date" />
+          </div>
+          <div class="field form-span-3">
+            <label>Xüsusi qeyd</label>
+            <textarea class="input" rows="3" placeholder="əlavə qeydlər (istəyə bağlı)"></textarea>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -189,18 +271,16 @@
 </div>
 
 <!-- SUCCESS MODAL -->
-<div class="modal-overlay" id="modal-created" data-modal-close>
+<div class="modal-overlay" id="modal-military-created" data-modal-close>
   <div class="modal-box">
     <div class="modal-body">
       <div class="modal-icon success">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
-      <h3 class="modal-title">İşçi əlavə olundu</h3>
-      <p class="modal-text">Yeni işçi qeydi <b>İşçilər</b> cədvəlinə yazıldı.
-         Növbəti addım: bu işçiyə hesab açıb dəvət göndərin — o daxil olub öz şəxsi məlumatlarını dolduracaq, siz təsdiqləyəcəksiniz. (Rəsmi işə qəbul əmri ayrıca Əmrlər bölməsindən yaradılır)</p>
+      <h3 class="modal-title">Hərbi qeydiyyat kartı əlavə olundu</h3>
+      <p class="modal-text">Yeni kart <b>Hərbi qeydiyyat</b> siyahısına yazıldı.</p>
       <div class="modal-actions">
-        <a href="employees.html" class="btn btn-outline">İşçilər siyahısı</a>
-        <a href="../accounts/account-create.html" class="btn btn-primary">Hesab aç</a>
+        <a href="military.html" class="btn btn-primary" style="flex:1;">Siyahıya qayıt</a>
       </div>
     </div>
   </div>
@@ -208,19 +288,8 @@
 
 <script src="../assets/js/app.js"></script>
 <script>
-  // Pre-fills name when arriving from a candidate's "İşə qəbul et" link
-  // (candidates/candidates.html?ad=...&soyad=...&namizeddir=1).
-  document.addEventListener("DOMContentLoaded", function () {
-    var params = new URLSearchParams(window.location.search);
-    if (params.get("namizeddir") !== "1") return;
-
-    var adField = document.getElementById("new-employee-ad");
-    var soyadField = document.getElementById("new-employee-soyad");
-    if (params.get("ad") && adField) adField.value = params.get("ad");
-    if (params.get("soyad") && soyadField) soyadField.value = params.get("soyad");
-
-    var note = document.getElementById("from-candidate-note");
-    if (note) note.style.display = "flex";
+  document.getElementById("military-submit-btn").addEventListener("click", function () {
+    openModal("modal-military-created");
   });
 </script>
 </body>
