@@ -10,46 +10,36 @@
 
 <div class="auth-page">
 
-  <div class="auth-visual">
+  <div class="auth-visual-simple">
     <div class="auth-blob auth-blob-1"></div>
     <div class="auth-blob auth-blob-2"></div>
     <div class="auth-blob auth-blob-3"></div>
     <div class="auth-grid-overlay"></div>
 
-    <div class="auth-brand">
+    <svg class="arches" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 400 V200 A150 150 0 0 1 300 200 V400" stroke="white" stroke-width="1.5"/>
+      <path d="M40 400 V220 A110 110 0 0 1 260 220 V400" stroke="white" stroke-width="1.5"/>
+      <path d="M80 400 V240 A70 70 0 0 1 220 240 V400" stroke="white" stroke-width="1.5"/>
+    </svg>
+
+    <div class="auth-logo-block">
       <img src="assets/images/logo.png" alt="BAAU logo" />
       <div>
-        <div class="auth-brand-name">Bakı Avrasiya Universiteti</div>
-        <div class="auth-brand-sub">HR AUTOMATION SYSTEM</div>
+        <div class="auth-uni-name">BAKI AVRASİYA<br/>UNİVERSİTETİ</div>
+        <div class="auth-uni-year">1992</div>
       </div>
     </div>
 
-    <div class="auth-headline">
-      <h1>İnsan resursları idarəetməsi <span class="accent">bir platformada</span></h1>
-      <p>İşçilər, əmək fəaliyyəti, təhsil, məzuniyyət, əmrlər və hesabatlar — vahid, sadə və etibarlı sistemdə.</p>
-    </div>
+    <div>
+      <div class="auth-logotype">
+        <span class="baau">BAAU</span>
+        <span class="divider"></span>
+        <span class="hr-text">HR<br/><span>AUTOMATION</span></span>
+      </div>
 
-    <div class="auth-stat-cards">
-      <div class="auth-stat-card">
-        <div class="auth-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="auth-stat-num">1,248</div>
-        <div class="auth-stat-label">Aktiv işçi</div>
-      </div>
-      <div class="auth-stat-card">
-        <div class="auth-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h1M9 13h1M14 9h1M14 13h1"/></svg>
-        </div>
-        <div class="auth-stat-num">42</div>
-        <div class="auth-stat-label">Struktur bölmə</div>
-      </div>
-      <div class="auth-stat-card">
-        <div class="auth-stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <div class="auth-stat-num">96%</div>
-        <div class="auth-stat-label">Data tamlığı</div>
+      <div class="auth-simple-headline">
+        <h1>İnsan resurslarının idarə edilməsi sisteminə xoş gəlmisiniz.</h1>
+        <p>Təhlükəsiz giriş vasitəsilə şəxsi hesabınıza daxil olaraq xidmətlərdən yararlanın.</p>
       </div>
     </div>
   </div>
@@ -58,123 +48,74 @@
     <div class="auth-card">
     <div class="auth-form">
 
-      <div class="auth-header-row">
-        <div class="auth-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <div>
-          <h2>Xoş gəlmisiniz</h2>
-          <div class="auth-security-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
-            Təhlükəsiz giriş
+      <h2>Xoş gəlmisiniz</h2>
+      <div class="security-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+        Təhlükəsiz giriş
+      </div>
+
+      <form id="login-form" onsubmit="event.preventDefault(); window.location.href = document.querySelector('.account-card.selected').dataset.href;">
+
+        <div class="account-type-label">Hesab növünü seçin</div>
+        <div class="account-select">
+          <div class="account-card selected" data-account="employee" data-href="portal/my-profile.html" data-label="İşçi kodu və ya e-poçt" data-placeholder="İşçi kodu və ya e-poçt daxil edin" data-btn="Daxil ol">
+            <div class="account-card-top">
+              <div class="account-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              </div>
+              <div class="account-card-radio"></div>
+            </div>
+            <div class="account-card-title">İşçi kabineti</div>
+            <div class="account-card-sub">Şəxsi hesabınıza daxil olun</div>
+          </div>
+
+          <div class="account-card" data-account="admin" data-href="dashboard/dashboard.html" data-label="İstifadəçi adı və ya e-poçt" data-placeholder="İstifadəçi adı və ya e-poçt daxil edin" data-btn="Daxil ol">
+            <div class="account-card-top">
+              <div class="account-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </div>
+              <div class="account-card-radio"></div>
+            </div>
+            <div class="account-card-title">İdarəetmə paneli</div>
+            <div class="account-card-sub">İdarəetmə funksiyalarına çıxış əldə edin</div>
           </div>
         </div>
-      </div>
-      <p class="auth-lead">Hesab növünü seçin və davam etmək üçün daxil olun.</p>
 
-      <div data-tab-group>
-        <div class="role-switch">
-          <div class="role-switch-indicator" id="role-indicator"></div>
-          <button type="button" class="role-btn active" data-tab-target="admin">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-            Admin
-          </button>
-          <button type="button" class="role-btn" data-tab-target="employee">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-            İşçi
-          </button>
+        <div class="field">
+          <label for="login-identifier" id="login-identifier-label">İşçi kodu və ya e-poçt</label>
+          <div class="input-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            <input class="input" type="text" id="login-identifier" placeholder="İşçi kodu və ya e-poçt daxil edin" />
+          </div>
         </div>
 
-        <!-- ADMIN PANEL -->
-        <div class="role-panel active" data-tab-panel="admin">
-          <form onsubmit="event.preventDefault(); window.location.href='dashboard/dashboard.html';">
-
-            <div class="role-note">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-              Bu giriş yalnız HR/Kadrlar şöbəsinin səlahiyyətli işçiləri üçündür. Bütün əməliyyatlar qeydə alınır.
-            </div>
-
-            <div class="field">
-              <label for="admin-username">İstifadəçi adı / E-poçt</label>
-              <div class="input-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
-                <input class="input" type="text" id="admin-username" placeholder="hr.admin@baau.edu.az" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="admin-password">Şifrə</label>
-              <div class="input-icon-wrap has-toggle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-                <input class="input" type="password" id="admin-password" placeholder="••••••••" />
-                <button type="button" class="password-toggle" aria-label="Şifrəni göstər">
-                  <svg class="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                  <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.6 18.6 0 0 1 5.06-5.94M9.9 4.24A10.6 10.6 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="M1 1l22 22"/></svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="field-row-between">
-              <label class="checkbox-line">
-                <input type="checkbox" checked />
-                Məni xatırla
-              </label>
-              <a class="link" href="#">Şifrəni unutmusunuz?</a>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">
-              Admin panelinə daxil ol
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        <div class="field">
+          <label for="login-password">Şifrə</label>
+          <div class="input-icon-wrap has-toggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <input class="input" type="password" id="login-password" placeholder="Şifrənizi daxil edin" />
+            <button type="button" class="password-toggle" aria-label="Şifrəni göstər">
+              <svg class="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.6 18.6 0 0 1 5.06-5.94M9.9 4.24A10.6 10.6 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="M1 1l22 22"/></svg>
             </button>
-          </form>
+          </div>
         </div>
 
-        <!-- EMPLOYEE PANEL -->
-        <div class="role-panel" data-tab-panel="employee">
-          <form onsubmit="event.preventDefault(); window.location.href='portal/my-profile.html';">
-
-            <div class="role-note">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-              Şəxsi kabinetinizdən yalnız öz məlumatlarınızı görə, müraciət göndərə və yeniləyə bilərsiniz.
-            </div>
-
-            <div class="field">
-              <label for="emp-code">İşçi kodu / FİN</label>
-              <div class="input-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg>
-                <input class="input" type="text" id="emp-code" placeholder="BAAU-00214" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="emp-password">Şifrə</label>
-              <div class="input-icon-wrap has-toggle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-                <input class="input" type="password" id="emp-password" placeholder="••••••••" />
-                <button type="button" class="password-toggle" aria-label="Şifrəni göstər">
-                  <svg class="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-                  <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.6 18.6 0 0 1 5.06-5.94M9.9 4.24A10.6 10.6 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="M1 1l22 22"/></svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="field-row-between">
-              <label class="checkbox-line">
-                <input type="checkbox" checked />
-                Məni xatırla
-              </label>
-              <a class="link" href="#">Şifrəni unutmusunuz?</a>
-            </div>
-
-            <button type="submit" class="btn btn-accent btn-block">
-              Şəxsi kabinetə daxil ol
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-            </button>
-          </form>
+        <div class="field-row-between">
+          <label class="checkbox-line">
+            <input type="checkbox" checked />
+            Məni xatırla
+          </label>
+          <a class="link" href="#">Şifrəni unutmusunuz?</a>
         </div>
-      </div>
 
-      <p class="auth-footnote">Bu sistemə icazəsiz daxil olma cəhdləri qeydə alınır və Kadrlar şöbəsinə bildirilir.</p>
+        <button type="submit" class="btn btn-primary btn-block" id="login-submit-btn">
+          Daxil ol
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <p class="auth-footnote">Bu sistemə icazəsiz daxil olma cəhdləri qeydə alınır və qanunvericiliyə uyğun olaraq məsuliyyət daşıyır.</p>
     </div>
     </div>
   </div>
@@ -183,29 +124,22 @@
 
 <script src="assets/js/app.js"></script>
 <script>
-  // Sliding role-switch indicator + password show/hide toggles (login page only).
+  // Account-type card selection + password show/hide toggle (login page only).
   document.addEventListener("DOMContentLoaded", function () {
-    var indicator = document.getElementById("role-indicator");
-    var switchEl = indicator ? indicator.closest(".role-switch") : null;
+    var cards = document.querySelectorAll(".account-card");
+    var identifierLabel = document.getElementById("login-identifier-label");
+    var identifierInput = document.getElementById("login-identifier");
+    var submitBtn = document.getElementById("login-submit-btn");
 
-    function positionIndicator(btn) {
-      if (!indicator || !switchEl || !btn) return;
-      var switchRect = switchEl.getBoundingClientRect();
-      var btnRect = btn.getBoundingClientRect();
-      indicator.style.left = (btnRect.left - switchRect.left) + "px";
-      indicator.style.width = btnRect.width + "px";
-    }
-
-    if (switchEl) {
-      var activeBtn = switchEl.querySelector(".role-btn.active") || switchEl.querySelector(".role-btn");
-      positionIndicator(activeBtn);
-      switchEl.querySelectorAll(".role-btn").forEach(function (btn) {
-        btn.addEventListener("click", function () { positionIndicator(btn); });
+    cards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        cards.forEach(function (c) { c.classList.remove("selected"); });
+        card.classList.add("selected");
+        if (identifierLabel) identifierLabel.textContent = card.dataset.label;
+        if (identifierInput) identifierInput.placeholder = card.dataset.placeholder;
+        if (submitBtn) submitBtn.firstChild.textContent = card.dataset.btn + " ";
       });
-      window.addEventListener("resize", function () {
-        positionIndicator(switchEl.querySelector(".role-btn.active"));
-      });
-    }
+    });
 
     document.querySelectorAll(".input-icon-wrap.has-toggle").forEach(function (wrap) {
       var toggle = wrap.querySelector(".password-toggle");
