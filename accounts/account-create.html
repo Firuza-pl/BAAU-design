@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yeni hesab — BAAU HR</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/images/logo.png" alt="BAAU" />
+      <div class="sidebar-brand-text">
+        BAAU HR
+        <span>AUTOMATION SYSTEM</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Əsas</div>
+        <a class="nav-item" href="../dashboard/dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+          İdarə paneli
+        </a>
+        <a class="nav-item" href="../employees/employees.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          İşçilər
+          <span class="badge-count">1,248</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 2v5h5"/></svg>
+          Namizədlər
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Kadr proseslər</div>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Məzuniyyətlər
+        </a>
+        <a class="nav-item" href="../orders/orders.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+          Əmrlər
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+          Təhsil məlumatları
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+          Hərbi qeydiyyat
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          Elmi fəaliyyət
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Analitika</div>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          Hesabatlar
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"/></svg>
+          Tənzimləmələr
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Sistem</div>
+        <a class="nav-item active" href="accounts.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Hesablar
+        </a>
+        <a class="nav-item" href="../change-requests/change-requests.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Dəyişiklik sorğuları
+          <span class="badge-count">3</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="avatar avatar-sm">RE</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Rüstəm Ələkbərov</div>
+          <div class="sidebar-user-role">HR Administrator</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Yeni hesab</h1>
+        <div class="breadcrumb"><a href="../dashboard/dashboard.html">BAAU HR</a> / <a href="accounts.html">Hesablar</a> / Yeni hesab</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-userchip">
+          <div class="avatar avatar-sm">RE</div>
+          <div>
+            <div class="name">Rüstəm Ələkbərov</div>
+            <div class="role">HR Administrator</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <div>
+          <h2>Yeni istifadəçi hesabı yarat</h2>
+          <div class="muted">auth.users — hr.employees-dən ayrı login hesabı. NOT: işdən çıxmış və ya sistemdən istifadə etməyəcək işçiyə hesab açmayın.</div>
+        </div>
+        <div class="page-head-actions">
+          <a href="accounts.html" class="btn btn-outline">Ləğv et</a>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div>
+
+          <div class="card card-pad mb-18">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              İşçi seçimi
+            </div>
+
+            <div class="form-grid">
+              <div class="field form-span-2">
+                <label>hr.employees-dən işçi <span class="req">*</span></label>
+                <select class="input" id="account-employee-select">
+                  <option value="">Ad, soyad və ya işçi kodu üzrə seçin</option>
+                  <option data-dept="Maliyyə Şöbəsi" data-position="Mütəxəssis" data-username="elvin.qasimov" data-email="elvin.qasimov@baau.edu.az" data-fullname="Elvin Qasımov">Elvin Qasımov — BAAU-00512 (Maliyyə Şöbəsi)</option>
+                  <option data-dept="Kompüter Elmləri Kafedrası" data-position="Kafedra müdiri" data-username="gunel.mammadova" data-email="gunel.mammadova@baau.edu.az" data-fullname="Günel Məmmədova">Günel Məmmədova — BAAU-00098 (Kompüter Elmləri Kafedrası)</option>
+                  <option data-dept="Hüquq Fakültəsi" data-position="Dosent" data-username="vuqar.aliyev" data-email="vuqar.aliyev@baau.edu.az" data-fullname="Vüqar Əliyev">Vüqar Əliyev — BAAU-00073 (Hüquq Fakültəsi)</option>
+                  <option data-dept="İqtisadiyyat və İdarəetmə Fakültəsi" data-position="Fakültə rəhbəri" data-username="nermin.safarova" data-email="nermin.safarova@baau.edu.az" data-fullname="Nərmin Səfərova">Nərmin Səfərova — BAAU-00021 (İqtisadiyyat və İdarəetmə Fakültəsi)</option>
+                </select>
+                <div class="field-hint">Yalnız hazırda aktiv işləyən (employment_status = İşləyir) və hələ hesabı olmayan işçilər siyahıda göstərilir.</div>
+              </div>
+              <div class="field">
+                <label>Struktur bölmə</label>
+                <input class="input" id="account-dept" type="text" value="—" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
+              </div>
+              <div class="field">
+                <label>Vəzifə</label>
+                <input class="input" id="account-position" type="text" value="—" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
+              </div>
+            </div>
+
+            <label class="checkbox-line" style="margin-top:14px;">
+              <input type="checkbox" id="account-system-checkbox" />
+              Bu hesab konkret işçiyə bağlı deyil (sistem/IT hesabı — employee_id = NULL)
+            </label>
+          </div>
+
+          <div class="card card-pad mb-18">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Hesab məlumatları (auth.users)
+            </div>
+            <div class="field-hint" style="margin-top:-4px; margin-bottom:14px;">
+              İşçi seçildikdə bu sahələr onun hr.employees / hr.employee_contacts qeydindən avtomatik doldurulur və redaktə olunmur — burada yenidən yazılmır. Şəxsi məlumatı dəyişmək lazımdırsa, işçinin öz kartından (employee-detail) edilməlidir.
+            </div>
+            <div class="form-grid">
+              <div class="field"><label>Username <span class="req">*</span></label><input class="input" id="account-username" type="text" placeholder="əvvəlcə işçi seçin" disabled style="color:var(--text-muted); background:var(--surface-alt);" /></div>
+              <div class="field"><label>E-poçt</label><input class="input" id="account-email" type="email" placeholder="əvvəlcə işçi seçin" disabled style="color:var(--text-muted); background:var(--surface-alt);" /></div>
+              <div class="field form-span-2"><label>Ekran adı (display_name)</label><input class="input" id="account-displayname" type="text" placeholder="əvvəlcə işçi seçin" disabled style="color:var(--text-muted); background:var(--surface-alt);" /></div>
+            </div>
+            <label class="checkbox-line" style="margin-top:6px;">
+              <input type="checkbox" checked />
+              İlk girişdə parol dəyişdirilsin (must_change_password)
+            </label>
+            <div class="role-note" style="margin-top:14px; margin-bottom:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <div>Diqqət: burada <b>parol təyin edilmir</b>. İşçi dəvət linkindən keçib öz şifrəsini özü yaradacaq.</div>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+              Rollar (auth.roles / user_roles)
+            </div>
+            <div class="radio-card-group" style="grid-template-columns: repeat(3, 1fr);">
+              <label class="radio-card">
+                <input type="checkbox" /> ADMIN
+              </label>
+              <label class="radio-card">
+                <input type="checkbox" /> HR
+              </label>
+              <label class="radio-card selected">
+                <input type="checkbox" checked /> EMPLOYEE
+              </label>
+            </div>
+            <div class="field-hint" style="margin-top:10px;">Birdən çox rol seçilə bilər. Sonradan REKTOR, PROREKTOR kimi xüsusi rollar da auth.roles-a əlavə oluna bilər.</div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="card card-pad mb-18">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+              Hesabat / Scope icazəsi (auth.user_data_scopes)
+            </div>
+            <div class="field">
+              <label>Görmə dairəsi</label>
+              <select class="input">
+                <option>SELF — yalnız öz məlumatları</option>
+                <option>DEPARTMENT — öz struktur bölməsi</option>
+                <option>GLOBAL — bütün təşkilat</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Struktur bölmə (yalnız DEPARTMENT üçün)</label>
+              <select class="input">
+                <option value="">—</option>
+                <option>Maliyyə Şöbəsi</option>
+                <option>Kompüter Elmləri Kafedrası</option>
+                <option>Hüquq Fakültəsi</option>
+              </select>
+            </div>
+            <div class="role-note" style="margin-top:4px; margin-bottom:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <div>Rol nə edə biləcəyini, scope isə <b>hansı</b> məlumatı görəcəyini müəyyən edir. Məs: HR rolu + DEPARTMENT scope = yalnız öz fakültəsinin işçilərini idarə edə bilər.</div>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Giriş üsulu (auth.one_time_tokens)
+            </div>
+            <div class="radio-card-group" style="grid-template-columns: 1fr;">
+              <label class="radio-card selected">
+                <input type="radio" name="invite-method" checked /> Dəvət linki göndər (e-poçtla, tövsiyə olunur)
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="invite-method" /> Müvəqqəti parol təyin et (əl ilə bildir)
+              </label>
+            </div>
+            <div class="field-hint" style="margin-top:10px;">Hesab yaradıldıqda status <b>INVITED</b> olacaq. İşçi linkdən keçib öz parolunu təyin edəndə status <b>ACTIVE</b>-ə dəyişəcək.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-footer-bar" style="max-width:none;">
+        <div class="muted" style="font-size:12.5px;">Hesab hələ yaradılmayıb</div>
+        <div style="display:flex; gap:10px;">
+          <a href="accounts.html" class="btn btn-outline">Ləğv et</a>
+          <button type="button" class="btn btn-accent" data-modal-open="modal-account-created">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Hesab yarat və dəvət göndər
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="modal-account-created" data-modal-close>
+  <div class="modal-box">
+    <div class="modal-body">
+      <div class="modal-icon success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h3 class="modal-title">Hesab yaradıldı</h3>
+      <p class="modal-text">Yeni hesab <b>auth.users</b> cədvəlinə yazıldı (status: <b>INVITED</b>). Bir dəfəlik dəvət linki (auth.one_time_tokens) işçinin e-poçtuna göndərildi. İşçi linkdən keçib parolunu təyin etdikdə hesab avtomatik <b>ACTIVE</b> olacaq.</p>
+      <div class="modal-actions">
+        <a href="accounts.html" class="btn btn-primary" style="flex:1;">Hesablar siyahısına qayıt</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/app.js"></script>
+<script>
+  // Employee selection auto-fills auth.users fields from the existing hr.employees
+  // record — HR/Admin only pick who the account belongs to, they don't re-type the
+  // person's identity. Manual entry is only allowed for employee-less system accounts.
+  document.addEventListener("DOMContentLoaded", function () {
+    var employeeSelect = document.getElementById("account-employee-select");
+    var systemCheckbox = document.getElementById("account-system-checkbox");
+
+    var deptField = document.getElementById("account-dept");
+    var positionField = document.getElementById("account-position");
+    var usernameField = document.getElementById("account-username");
+    var emailField = document.getElementById("account-email");
+    var displayNameField = document.getElementById("account-displayname");
+
+    function setDisabled(field, disabled) {
+      field.disabled = disabled;
+      field.style.color = disabled ? "var(--text-muted)" : "var(--text-primary)";
+      field.style.background = disabled ? "var(--surface-alt)" : "var(--surface)";
+    }
+
+    employeeSelect.addEventListener("change", function () {
+      var opt = employeeSelect.options[employeeSelect.selectedIndex];
+      if (!opt.value) {
+        deptField.value = "—";
+        positionField.value = "—";
+        usernameField.value = "";
+        emailField.value = "";
+        displayNameField.value = "";
+        usernameField.placeholder = "əvvəlcə işçi seçin";
+        emailField.placeholder = "əvvəlcə işçi seçin";
+        displayNameField.placeholder = "əvvəlcə işçi seçin";
+        return;
+      }
+      deptField.value = opt.getAttribute("data-dept") || "—";
+      positionField.value = opt.getAttribute("data-position") || "—";
+      usernameField.value = opt.getAttribute("data-username") || "";
+      emailField.value = opt.getAttribute("data-email") || "";
+      displayNameField.value = opt.getAttribute("data-fullname") || "";
+    });
+
+    systemCheckbox.addEventListener("change", function () {
+      var isSystem = systemCheckbox.checked;
+
+      employeeSelect.disabled = isSystem;
+      if (isSystem) {
+        employeeSelect.value = "";
+        employeeSelect.dispatchEvent(new Event("change"));
+      }
+
+      setDisabled(usernameField, !isSystem);
+      setDisabled(emailField, !isSystem);
+      setDisabled(displayNameField, !isSystem);
+
+      if (isSystem) {
+        usernameField.placeholder = "məs. system.audit";
+        emailField.placeholder = "məs. it.support@baau.edu.az";
+        displayNameField.placeholder = "məs. Sistem Auditi";
+      } else {
+        usernameField.value = "";
+        emailField.value = "";
+        displayNameField.value = "";
+        usernameField.placeholder = "əvvəlcə işçi seçin";
+        emailField.placeholder = "əvvəlcə işçi seçin";
+        displayNameField.placeholder = "əvvəlcə işçi seçin";
+      }
+    });
+  });
+</script>
+</body>
+</html>

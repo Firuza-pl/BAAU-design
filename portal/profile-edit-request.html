@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dəyişiklik sorğusu — BAAU HR</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR (EMPLOYEE scope — reduced) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/images/logo.png" alt="BAAU" />
+      <div class="sidebar-brand-text">
+        BAAU HR
+        <span>ŞƏXSİ KABİNET</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Mənim</div>
+        <a class="nav-item" href="my-profile.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          Mənim profilim
+        </a>
+        <a class="nav-item" href="my-requests.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Sorğularım
+          <span class="badge-count">1</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="sidebar-user" href="../index.html">
+        <div class="avatar avatar-sm">AQ</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Aysel Quliyeva</div>
+          <div class="sidebar-user-role">İşçi</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Dəyişiklik sorğusu</h1>
+        <div class="breadcrumb"><a href="my-profile.html">Mənim profilim</a> / Dəyişiklik sorğusu</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-userchip">
+          <div class="avatar avatar-sm">AQ</div>
+          <div>
+            <div class="name">Aysel Quliyeva</div>
+            <div class="role">İşçi · Maliyyə Şöbəsi</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <div>
+          <h2>Məlumatlarımı yenilə</h2>
+          <div class="muted">Dəyişdirdiyiniz sahələr HR tərəfindən yoxlanılana qədər əsas profilinizə tətbiq olunmayacaq (hr.employee_change_requests → status: SUBMITTED).</div>
+        </div>
+        <div class="page-head-actions">
+          <a href="my-profile.html" class="btn btn-outline">Ləğv et</a>
+        </div>
+      </div>
+
+      <div class="role-note mb-18">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <div>Yalnız dəyişdirdiyiniz sahələr sorğuya daxil ediləcək. Əmək fəaliyyəti məlumatları bu formada yoxdur — onlar yalnız HR/əmr vasitəsilə dəyişdirilir.</div>
+      </div>
+
+      <div data-tab-group>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab-target="personal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            Şəxsi məlumat
+          </button>
+          <button class="tab-btn" data-tab-target="contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+            Əlaqə
+          </button>
+          <button class="tab-btn" data-tab-target="education">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+            Təhsil
+          </button>
+          <button class="tab-btn" data-tab-target="family">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Ailə
+          </button>
+          <button class="tab-btn" data-tab-target="prev-employment">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            BAAU-ya qədərki iş stajı
+          </button>
+        </div>
+
+        <!-- Şəxsi məlumat -->
+        <div class="tab-panel active" data-tab-panel="personal">
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              hr.employee_personal
+            </div>
+            <div class="form-grid cols-3">
+              <div class="field"><label>Ad</label><input class="input" type="text" value="Aysel" disabled style="color:var(--text-muted); background:var(--surface-alt);" /><div class="field-hint">Ad/soyad dəyişikliyi ayrıca sənəd (əvvəlki soyad və s.) tələb edir — HR ilə əlaqə saxlayın.</div></div>
+              <div class="field"><label>Soyad</label><input class="input" type="text" value="Quliyeva" disabled style="color:var(--text-muted); background:var(--surface-alt);" /></div>
+              <div class="field"><label>Ata adı</label><input class="input" type="text" value="Vüqar qızı" /></div>
+
+              <div class="field"><label>Doğulduğu yer</label>
+                <select class="input">
+                  <option>Gəncə şəhəri</option>
+                  <option>Bakı — Nəsimi rayonu</option>
+                  <option>Sumqayıt şəhəri</option>
+                </select>
+              </div>
+              <div class="field"><label>Ailə vəziyyəti</label>
+                <select class="input">
+                  <option selected>Evli</option>
+                  <option>Subay</option>
+                  <option>Boşanmış</option>
+                  <option>Dul</option>
+                </select>
+              </div>
+              <div class="field"><label>Qan qrupu</label><input class="input" type="text" placeholder="məs. A(II) Rh+" /></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Əlaqə -->
+        <div class="tab-panel" data-tab-panel="contact">
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+              hr.employee_contacts / hr.employee_addresses
+            </div>
+            <div class="form-grid">
+              <div class="field"><label>Mobil telefon</label><input class="input" type="text" value="+994 55 234 56 78" /></div>
+              <div class="field"><label>E-poçt</label><input class="input" type="email" value="aysel.quliyeva@baau.edu.az" /></div>
+              <div class="field form-span-2"><label>Ünvan</label><textarea class="input" rows="2">Bakı ş., Nəsimi r., Bulbul pr. 45</textarea></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Təhsil -->
+        <div class="tab-panel" data-tab-panel="education">
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+              hr.education_records — yeni təhsil məlumatı əlavə et
+            </div>
+            <div id="education-rows">
+              <div class="repeat-card">
+                <button type="button" class="icon-btn btn-sm repeat-card-remove" style="width:30px;height:30px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                </button>
+                <div class="form-grid cols-3">
+                  <div class="field form-span-2"><label>Təhsil müəssisəsi</label><input class="input" type="text" placeholder="məs. Bakı Dövlət Universiteti" /></div>
+                  <div class="field">
+                    <label>Təhsil dərəcəsi</label>
+                    <select class="input"><option>Bakalavr</option><option>Magistr</option><option>Doktorantura</option></select>
+                  </div>
+                  <div class="field form-span-2"><label>İxtisas</label><input class="input" type="text" placeholder="məs. Maliyyə" /></div>
+                  <div class="field"><label>Bitirmə ili</label><input class="input" type="number" placeholder="2026" /></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="add-row-btn" data-repeat-add="education-rows">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Başqa təhsil məlumatı əlavə et
+            </button>
+          </div>
+        </div>
+
+        <!-- Ailə -->
+        <div class="tab-panel" data-tab-panel="family">
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              hr.employee_family_members — yeni ailə üzvü əlavə et
+            </div>
+            <div id="family-rows">
+              <div class="repeat-card">
+                <button type="button" class="icon-btn btn-sm repeat-card-remove" style="width:30px;height:30px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                </button>
+                <div class="form-grid cols-3">
+                  <div class="field"><label>Ad, soyad</label><input class="input" type="text" /></div>
+                  <div class="field">
+                    <label>Qohumluq</label>
+                    <select class="input"><option>Övlad</option><option>Həyat yoldaşı</option><option>Valideyn</option><option>Digər</option></select>
+                  </div>
+                  <div class="field"><label>Doğum tarixi</label><input class="input" type="date" /></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="add-row-btn" data-repeat-add="family-rows">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Ailə üzvü əlavə et
+            </button>
+          </div>
+        </div>
+
+        <!-- BAAU-ya qədərki iş stajı -->
+        <div class="tab-panel" data-tab-panel="prev-employment">
+          <div class="role-note mb-18">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>BAAU-dan əvvəlki iş yerləriniz haqqında məlumatı yalnız siz bilirsiniz, ona görə bu hissəni özünüz doldurursunuz (hr.previous_employment). Təsdiqləndikdən sonra ümumi əmək stajınızın hesablanmasında (hr.employee_experience_periods) nəzərə alınacaq.</div>
+          </div>
+          <div class="card card-pad">
+            <div class="subsection-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              hr.previous_employment — BAAU-ya qədərki iş yerləri
+            </div>
+            <div id="prev-employment-rows">
+              <div class="repeat-card">
+                <button type="button" class="icon-btn btn-sm repeat-card-remove" style="width:30px;height:30px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                </button>
+                <div class="form-grid cols-3">
+                  <div class="field form-span-2"><label>Təşkilat / müəssisə</label><input class="input" type="text" placeholder="məs. \"Kapital Bank\" ASC" /></div>
+                  <div class="field"><label>Vəzifə</label><input class="input" type="text" placeholder="məs. Kredit mütəxəssisi" /></div>
+                  <div class="field"><label>Başlama tarixi</label><input class="input" type="date" /></div>
+                  <div class="field"><label>Bitmə tarixi</label><input class="input" type="date" /></div>
+                  <div class="field"><label>İşdən çıxma səbəbi</label><input class="input" type="text" placeholder="istəyə bağlı" /></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="add-row-btn" data-repeat-add="prev-employment-rows">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Başqa iş yeri əlavə et
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-footer-bar" style="max-width:none;">
+        <div class="muted" style="font-size:12.5px;">Status: DRAFT (hələ göndərilməyib)</div>
+        <div style="display:flex; gap:10px;">
+          <a href="my-profile.html" class="btn btn-outline">Ləğv et</a>
+          <button type="button" class="btn btn-primary" data-modal-open="modal-request-saved">Layihə kimi saxla</button>
+          <button type="button" class="btn btn-accent" data-modal-open="modal-request-submitted">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            Təsdiqə göndər
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DRAFT SAVED MODAL -->
+<div class="modal-overlay" id="modal-request-saved" data-modal-close>
+  <div class="modal-box">
+    <div class="modal-body">
+      <div class="modal-icon warning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      </div>
+      <h3 class="modal-title">Layihə kimi saxlanıldı</h3>
+      <p class="modal-text">Sorğunuz <b>DRAFT</b> statusunda saxlanıldı. HR-a göndərmək üçün "Sorğularım" bölməsindən istənilən vaxt davam edib təsdiqə göndərə bilərsiniz.</p>
+      <div class="modal-actions">
+        <a href="my-requests.html" class="btn btn-primary" style="flex:1;">Sorğularıma bax</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMITTED MODAL -->
+<div class="modal-overlay" id="modal-request-submitted" data-modal-close>
+  <div class="modal-box">
+    <div class="modal-body">
+      <div class="modal-icon success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h3 class="modal-title">Sorğu göndərildi</h3>
+      <p class="modal-text">Dəyişiklik sorğunuz HR-a göndərildi (status: <b>SUBMITTED</b>). Yoxlanılıb təsdiqləndikdən sonra məlumatlarınız avtomatik yenilənəcək. İmtina olunarsa, səbəbi görəcəksiniz.</p>
+      <div class="modal-actions">
+        <a href="my-requests.html" class="btn btn-primary" style="flex:1;">Sorğularıma bax</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

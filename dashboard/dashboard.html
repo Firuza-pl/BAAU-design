@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>İdarə paneli — BAAU HR</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/images/logo.png" alt="BAAU" />
+      <div class="sidebar-brand-text">
+        BAAU HR
+        <span>AUTOMATION SYSTEM</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Əsas</div>
+        <a class="nav-item active" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+          İdarə paneli
+        </a>
+        <a class="nav-item" href="../employees/employees.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          İşçilər
+          <span class="badge-count">1,248</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 2v5h5"/></svg>
+          Namizədlər
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Kadr proseslər</div>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Məzuniyyətlər
+        </a>
+        <a class="nav-item" href="../orders/orders.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+          Əmrlər
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+          Təhsil məlumatları
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+          Hərbi qeydiyyat
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          Elmi fəaliyyət
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Analitika</div>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          Hesabatlar
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"/></svg>
+          Tənzimləmələr
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Sistem</div>
+        <a class="nav-item" href="../accounts/accounts.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Hesablar
+        </a>
+        <a class="nav-item" href="../change-requests/change-requests.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Dəyişiklik sorğuları
+          <span class="badge-count">3</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="avatar avatar-sm">RE</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Rüstəm Ələkbərov</div>
+          <div class="sidebar-user-role">HR Administrator</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>İdarə paneli</h1>
+        <div class="breadcrumb">BAAU HR &nbsp;/&nbsp; İdarə paneli</div>
+      </div>
+
+      <div class="topbar-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="İşçi, vəzifə, şöbə axtar..." />
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+        <div class="topbar-userchip">
+          <div class="avatar avatar-sm">RE</div>
+          <div>
+            <div class="name">Rüstəm Ələkbərov</div>
+            <div class="role">HR Administrator</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- STAT TILES -->
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <div class="stat-tile-top">
+            <div class="stat-icon navy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="stat-trend up">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+              3.2%
+            </div>
+          </div>
+          <div>
+            <div class="stat-value">1,248</div>
+            <div class="stat-label">Aktiv işçi</div>
+          </div>
+        </div>
+
+        <div class="stat-tile">
+          <div class="stat-tile-top">
+            <div class="stat-icon warning">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <div class="stat-trend up">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+              8.1%
+            </div>
+          </div>
+          <div>
+            <div class="stat-value">64</div>
+            <div class="stat-label">Hazırda məzuniyyətdə</div>
+          </div>
+        </div>
+
+        <div class="stat-tile">
+          <div class="stat-tile-top">
+            <div class="stat-icon red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+            </div>
+            <div class="stat-trend down">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+              1.4%
+            </div>
+          </div>
+          <div>
+            <div class="stat-value">17</div>
+            <div class="stat-label">Bu ay imzalanan əmrlər</div>
+          </div>
+        </div>
+
+        <div class="stat-tile">
+          <div class="stat-tile-top">
+            <div class="stat-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+            </div>
+            <div class="stat-trend up">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+              2 yeni
+            </div>
+          </div>
+          <div>
+            <div class="stat-value">312</div>
+            <div class="stat-label">Elmi dərəcəli işçi (E01)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW: gender/age chart + activity feed -->
+      <div class="grid-2 mb-18">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Cins və yaş statistikası</h3>
+              <div class="muted">rpt.v_staff_gender_age_statistics — K02</div>
+            </div>
+            <span class="tag">Bu il</span>
+          </div>
+          <div class="card-pad">
+            <div class="bar-row">
+              <div class="bar-label">Qadın, 18–30</div>
+              <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
+              <div class="bar-value">184</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Qadın, 31–45</div>
+              <div class="bar-track"><div class="bar-fill" style="width:62%"></div></div>
+              <div class="bar-value">301</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Qadın, 46+</div>
+              <div class="bar-track"><div class="bar-fill" style="width:27%"></div></div>
+              <div class="bar-value">132</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Kişi, 18–30</div>
+              <div class="bar-track"><div class="bar-fill" style="width:31%"></div></div>
+              <div class="bar-value">151</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Kişi, 31–45</div>
+              <div class="bar-track"><div class="bar-fill" style="width:54%"></div></div>
+              <div class="bar-value">264</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Kişi, 46+</div>
+              <div class="bar-track"><div class="bar-fill" style="width:44%"></div></div>
+              <div class="bar-value">216</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Son fəaliyyət</h3>
+              <div class="muted">Əmrlər və dəyişikliklər</div>
+            </div>
+          </div>
+          <div class="card-pad" style="padding-top:8px;">
+            <div class="feed-item">
+              <div class="feed-dot" style="background:var(--success-bg); color:var(--success);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+              </div>
+              <div>
+                <div class="feed-text"><b>Aysel Quliyeva</b> işə qəbul edildi — Maliyyə şöbəsi</div>
+                <div class="feed-time">Bu gün, 09:42</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-dot" style="background:var(--warning-bg); color:var(--warning);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              </div>
+              <div>
+                <div class="feed-text"><b>Elçin Bağırov</b> əmək məzuniyyətinə çıxdı (14 gün)</div>
+                <div class="feed-time">Dünən, 16:20</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-dot" style="background:#eaebf9; color:var(--navy-600);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              </div>
+              <div>
+                <div class="feed-text">№340 əmri təsdiqləndi — vəzifə dəyişikliyi</div>
+                <div class="feed-time">2 gün əvvəl</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-dot" style="background:var(--danger-bg); color:var(--danger);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21l-6-6M17 21l6-6"/></svg>
+              </div>
+              <div>
+                <div class="feed-text"><b>Kamran Hüseynov</b> işdən azad olundu</div>
+                <div class="feed-time">3 gün əvvəl</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW: departments + birthdays -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Struktur bölmələr üzrə say</h3>
+              <div class="muted">Fakültə / Kafedra / Şöbə</div>
+            </div>
+            <a class="link" href="../employees/employees.html">Hamısına bax</a>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Bölmə</th>
+                  <th>Növ</th>
+                  <th>İşçi sayı</th>
+                  <th>Boş ştat</th>
+                  <th>Rəhbər</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>İqtisadiyyat və İdarəetmə Fakültəsi</b></td>
+                  <td><span class="tag">Fakültə</span></td>
+                  <td>186</td>
+                  <td>4</td>
+                  <td>N. Səfərova</td>
+                </tr>
+                <tr>
+                  <td><b>Kompüter Elmləri Kafedrası</b></td>
+                  <td><span class="tag">Kafedra</span></td>
+                  <td>52</td>
+                  <td>2</td>
+                  <td>R. Məmmədli</td>
+                </tr>
+                <tr>
+                  <td><b>Maliyyə Şöbəsi</b></td>
+                  <td><span class="tag">Şöbə</span></td>
+                  <td>18</td>
+                  <td>0</td>
+                  <td>A. Quliyeva</td>
+                </tr>
+                <tr>
+                  <td><b>Hüquq Fakültəsi</b></td>
+                  <td><span class="tag">Fakültə</span></td>
+                  <td>94</td>
+                  <td>3</td>
+                  <td>V. Əliyev</td>
+                </tr>
+                <tr>
+                  <td><b>Kadrlar Şöbəsi</b></td>
+                  <td><span class="tag">Şöbə</span></td>
+                  <td>9</td>
+                  <td>1</td>
+                  <td>R. Ələkbərov</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Ad günləri</h3>
+              <div class="muted">rpt.v_active_employee_birthdays</div>
+            </div>
+          </div>
+          <div class="card-pad" style="padding-top:8px;">
+            <div class="mini-person">
+              <div class="avatar avatar-sm">GM</div>
+              <div>
+                <div class="mini-person-name">Günel Məmmədova</div>
+                <div class="mini-person-sub">Kafedra müdiri · İT</div>
+              </div>
+              <div class="mini-person-date">22 Avq</div>
+            </div>
+            <div class="mini-person">
+              <div class="avatar avatar-sm">TH</div>
+              <div>
+                <div class="mini-person-name">Tural Hacıyev</div>
+                <div class="mini-person-sub">Dosent · Hüquq</div>
+              </div>
+              <div class="mini-person-date">25 Avq</div>
+            </div>
+            <div class="mini-person">
+              <div class="avatar avatar-sm">SN</div>
+              <div>
+                <div class="mini-person-name">Sevinc Nəsirova</div>
+                <div class="mini-person-sub">Mütəxəssis · Kadrlar</div>
+              </div>
+              <div class="mini-person-date">29 Avq</div>
+            </div>
+            <div class="mini-person">
+              <div class="avatar avatar-sm">EQ</div>
+              <div>
+                <div class="mini-person-name">Elvin Qasımov</div>
+                <div class="mini-person-sub">Müəllim · Maliyyə</div>
+              </div>
+              <div class="mini-person-date">3 Sen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

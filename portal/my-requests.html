@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sorğularım — BAAU HR</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR (EMPLOYEE scope — reduced) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/images/logo.png" alt="BAAU" />
+      <div class="sidebar-brand-text">
+        BAAU HR
+        <span>ŞƏXSİ KABİNET</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Mənim</div>
+        <a class="nav-item" href="my-profile.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          Mənim profilim
+        </a>
+        <a class="nav-item active" href="my-requests.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Sorğularım
+          <span class="badge-count">1</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="sidebar-user" href="../index.html">
+        <div class="avatar avatar-sm">AQ</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Aysel Quliyeva</div>
+          <div class="sidebar-user-role">İşçi</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Sorğularım</h1>
+        <div class="breadcrumb"><a href="my-profile.html">Mənim profilim</a> / Sorğularım</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-userchip">
+          <div class="avatar avatar-sm">AQ</div>
+          <div>
+            <div class="name">Aysel Quliyeva</div>
+            <div class="role">İşçi · Maliyyə Şöbəsi</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <div>
+          <h2>Dəyişiklik sorğularım</h2>
+          <div class="muted">hr.employee_change_requests — göndərdiyiniz bütün sorğuların statusu və HR rəyi</div>
+        </div>
+        <div class="page-head-actions">
+          <a href="profile-edit-request.html" class="btn btn-accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            Yeni sorğu
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Sorğu №</th>
+                <th>Xülasə</th>
+                <th>Göndərilmə tarixi</th>
+                <th>Status</th>
+                <th style="text-align:right;">Əməliyyat</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td><span class="tag">#REQ-1042</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Ata adı və ünvan yeniləməsi</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Şəxsi məlumat, Əlaqə — 2 sahə</div>
+                </td>
+                <td>15.08.2026</td>
+                <td><span class="badge badge-warning">Gözləyir</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">#REQ-0987</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Ünvan yeniləməsi</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Əlaqə — 1 sahə</div>
+                </td>
+                <td>02.06.2026</td>
+                <td><span class="badge badge-success">Təsdiqləndi</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-request-detail-approved">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">#REQ-0812</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Ailə üzvü əlavəsi</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Ailə — 1 yeni qeyd</div>
+                </td>
+                <td>10.03.2026</td>
+                <td><span class="badge badge-danger">Rədd edildi</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-request-detail-rejected">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">#REQ-0700</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Yeni təhsil məlumatı (tamamlanmayıb)</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Təhsil — layihə</div>
+                </td>
+                <td><span class="text-muted">Göndərilməyib</span></td>
+                <td><span class="badge badge-neutral">Layihə</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <a href="profile-edit-request.html" class="btn btn-outline btn-sm">Davam et</a>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- APPROVED DETAIL MODAL -->
+<div class="modal-overlay" id="modal-request-detail-approved" data-modal-close>
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <h3>#REQ-0987 — Ünvan yeniləməsi</h3>
+      <button type="button" class="modal-close" data-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body text-left">
+      <div class="flex items-center gap-8 mb-18">
+        <span class="badge badge-success">Təsdiqləndi</span>
+        <span class="text-muted" style="font-size:12.5px;">04.06.2026 tarixində Sevinc Nəsirova (HR) tərəfindən</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Sahə</th><th>Əvvəlki dəyər</th><th>Təklif olunan dəyər</th></tr></thead>
+          <tbody>
+            <tr><td>Ünvan</td><td class="text-muted">Bakı ş., Yasamal r., Nizami 12</td><td><b>Bakı ş., Nəsimi r., Bulbul pr. 45</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-actions" style="margin-top:20px;">
+        <button type="button" class="btn btn-outline" style="flex:1;" data-modal-close>Bağla</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REJECTED DETAIL MODAL -->
+<div class="modal-overlay" id="modal-request-detail-rejected" data-modal-close>
+  <div class="modal-box modal-wide">
+    <div class="modal-header">
+      <h3>#REQ-0812 — Ailə üzvü əlavəsi</h3>
+      <button type="button" class="modal-close" data-modal-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body text-left">
+      <div class="flex items-center gap-8 mb-18">
+        <span class="badge badge-danger">Rədd edildi</span>
+        <span class="text-muted" style="font-size:12.5px;">12.03.2026 tarixində Sevinc Nəsirova (HR) tərəfindən</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Sahə</th><th>Təklif olunan dəyər</th></tr></thead>
+          <tbody>
+            <tr><td>Ailə üzvü (yeni)</td><td><b>Nərmin Quliyeva — Övlad — 19.05.2016</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="role-note warn" style="margin-top:16px; margin-bottom:0;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <div><b>HR qeydi:</b> "Doğum tarixi sənədlə (doğum şəhadətnaməsi) təsdiqlənməyib, zəhmət olmasa sənəd əlavə edib yenidən göndərin."</div>
+      </div>
+      <div class="modal-actions" style="margin-top:20px;">
+        <button type="button" class="btn btn-outline" style="flex:1;" data-modal-close>Bağla</button>
+        <a href="profile-edit-request.html" class="btn btn-accent" style="flex:1;">Yenidən göndər</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

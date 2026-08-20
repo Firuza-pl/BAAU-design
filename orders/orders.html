@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Əmrlər — BAAU HR</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="../assets/images/logo.png" alt="BAAU" />
+      <div class="sidebar-brand-text">
+        BAAU HR
+        <span>AUTOMATION SYSTEM</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Əsas</div>
+        <a class="nav-item" href="../dashboard/dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+          İdarə paneli
+        </a>
+        <a class="nav-item" href="../employees/employees.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          İşçilər
+          <span class="badge-count">1,248</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 2v5h5"/></svg>
+          Namizədlər
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Kadr proseslər</div>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Məzuniyyətlər
+        </a>
+        <a class="nav-item active" href="orders.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+          Əmrlər
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+          Təhsil məlumatları
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+          Hərbi qeydiyyat
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          Elmi fəaliyyət
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Analitika</div>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          Hesabatlar
+        </a>
+        <a class="nav-item" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"/></svg>
+          Tənzimləmələr
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Sistem</div>
+        <a class="nav-item" href="../accounts/accounts.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Hesablar
+        </a>
+        <a class="nav-item" href="../change-requests/change-requests.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Dəyişiklik sorğuları
+          <span class="badge-count">3</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="avatar avatar-sm">RE</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Rüstəm Ələkbərov</div>
+          <div class="sidebar-user-role">HR Administrator</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Əmrlər</h1>
+        <div class="breadcrumb"><a href="../dashboard/dashboard.html">BAAU HR</a> / Əmrlər</div>
+      </div>
+      <div class="topbar-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Əmr, işçi axtar..." />
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-userchip">
+          <div class="avatar avatar-sm">RE</div>
+          <div>
+            <div class="name">Rüstəm Ələkbərov</div>
+            <div class="role">HR Administrator</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <div>
+          <h2>Əmrlər</h2>
+          <div class="muted">hr.orders — order_fields → order_classifications → order_types → order_subtypes iyerarxiyası əsasında</div>
+        </div>
+        <div class="page-head-actions">
+          <a href="order-create.html" class="btn btn-accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            Yeni əmr
+          </a>
+        </div>
+      </div>
+
+      <div class="stat-grid" style="margin-bottom:20px;">
+        <div class="stat-tile">
+          <div class="stat-tile-top"><div class="stat-icon success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div></div>
+          <div><div class="stat-value">17</div><div class="stat-label">Bu ay imzalanan</div></div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-top"><div class="stat-icon warning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div></div>
+          <div><div class="stat-value">5</div><div class="stat-label">Təsdiq gözləyir</div></div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-top"><div class="stat-icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div></div>
+          <div><div class="stat-value">2</div><div class="stat-label">Bu il ləğv edilib</div></div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-top"><div class="stat-icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div></div>
+          <div><div class="stat-value">486</div><div class="stat-label">Ümumi əmr (bu il)</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="table-toolbar">
+          <div class="table-toolbar-left">
+            <div class="filter-input" style="position:relative;">
+              <svg style="position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--text-muted);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+              <input class="input" data-table-search style="padding-left:32px; font-size:12.5px; padding-top:8px; padding-bottom:8px;" type="text" placeholder="Əmr №, işçi axtar..." />
+            </div>
+            <select class="select-chip">
+              <option>Bütün sahələr</option>
+              <option>Kadr məsələləri</option>
+              <option>Məzuniyyət məsələləri</option>
+              <option>Tələbə məsələləri</option>
+            </select>
+            <select class="select-chip">
+              <option>Bütün statuslar</option>
+              <option>Təsdiqlənib</option>
+              <option>Gözləyir</option>
+              <option>Ləğv edilib</option>
+              <option>Layihə</option>
+            </select>
+          </div>
+          <div class="table-toolbar-right">
+            <button class="btn btn-outline btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+              İxrac et
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table" data-table-target>
+            <thead>
+              <tr>
+                <th>Əmr №</th>
+                <th>Növ</th>
+                <th>İşçi</th>
+                <th>Tarix</th>
+                <th>Status</th>
+                <th style="text-align:right;">Əməliyyat</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td><span class="tag">№341</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Vəzifəyə təyinat</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Kadr məsələləri / Vəzifə dəyişikliyi</div>
+                </td>
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">AQ</div>
+                    <div class="cell-person-name">Aysel Quliyeva</div>
+                  </div>
+                </td>
+                <td>01.04.2022</td>
+                <td><span class="badge badge-success">Təsdiqlənib</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-order" data-modal-label="Əmr №341 — Vəzifəyə təyinat (Aysel Quliyeva)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">№214</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Əmək məzuniyyəti</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Məzuniyyət məsələləri / Məzuniyyət haqqında</div>
+                </td>
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">AQ</div>
+                    <div class="cell-person-name">Aysel Quliyeva</div>
+                  </div>
+                </td>
+                <td>28.06.2025</td>
+                <td><span class="badge badge-success">Təsdiqlənib</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-order" data-modal-label="Əmr №214 — Əmək məzuniyyəti (Aysel Quliyeva)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">№342</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">İşə qəbul (ştat üzrə)</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Kadr məsələləri / İşə qəbul haqqında</div>
+                </td>
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">EQ</div>
+                    <div class="cell-person-name">Elvin Qasımov</div>
+                  </div>
+                </td>
+                <td>15.08.2026</td>
+                <td><span class="badge badge-warning">Gözləyir</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-order" data-modal-label="Əmr №342 — İşə qəbul (Elvin Qasımov)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">№088</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Əmək məzuniyyəti</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Məzuniyyət məsələləri / Məzuniyyət haqqında</div>
+                </td>
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">TH</div>
+                    <div class="cell-person-name">Tural Hacıyev</div>
+                  </div>
+                </td>
+                <td>08.02.2025</td>
+                <td><span class="badge badge-success">Təsdiqlənib</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-order" data-modal-label="Əmr №088 — Əmək məzuniyyəti (Tural Hacıyev)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">№309</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Nizam-intizam qaydasında azad etmə</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Kadr məsələləri / İşdən azad olma haqqında</div>
+                </td>
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">KH</div>
+                    <div class="cell-person-name">Kamran Hüseynov</div>
+                  </div>
+                </td>
+                <td>18.05.2026</td>
+                <td><span class="badge badge-danger">Ləğv edilib</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-order" data-modal-label="Əmr №309 — İşdən azad etmə (Kamran Hüseynov)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td><span class="tag">№343</span></td>
+                <td>
+                  <div style="font-weight:600; font-size:13px;">Struktur daxilində təyinat</div>
+                  <div style="font-size:11.5px; color:var(--text-muted); margin-top:2px;">Kadr məsələləri / Vəzifə dəyişikliyi</div>
+                </td>
+                <td>
+                  <div class="cell-person">
+                    <div class="avatar avatar-sm">SN</div>
+                    <div class="cell-person-name">Sevinc Nəsirova</div>
+                  </div>
+                </td>
+                <td>01.02.2023</td>
+                <td><span class="badge badge-neutral">Layihə</span></td>
+                <td>
+                  <div class="cell-actions">
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                    <button class="icon-btn btn-sm" style="width:32px;height:32px; color:var(--danger);" data-modal-open="modal-delete-order" data-modal-label="Əmr №343 — Struktur daxilində təyinat (Sevinc Nəsirova)">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <div class="muted">486 nəticədən 1–6 göstərilir</div>
+          <div class="pagination">
+            <button class="page-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">…</button>
+            <button class="page-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM MODAL -->
+<div class="modal-overlay" id="modal-delete-order" data-modal-close>
+  <div class="modal-box">
+    <div class="modal-body">
+      <div class="modal-icon danger">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg>
+      </div>
+      <h3 class="modal-title">Əmri silmək istədiyinizə əminsiniz?</h3>
+      <p class="modal-text">
+        <b data-modal-label-target>Bu əmr</b> həmişəlik silinəcək. Bu əməliyyat geri qaytarılmır və əlaqəli iş qeydlərinə (employment_history, leave_records) təsir edə bilər.
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" data-modal-close>Ləğv et</button>
+        <button type="button" class="btn btn-accent" data-modal-confirm-delete data-success-message="Əmr silindi.">Bəli, sil</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
