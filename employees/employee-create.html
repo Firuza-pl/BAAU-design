@@ -53,7 +53,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
           Təhsil məlumatları
         </a>
-        <a class="nav-item" href="#">
+        <a class="nav-item" href="../military/military.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
           Hərbi qeydiyyat
         </a>
@@ -160,6 +160,12 @@
           Əsas identifikasiya 
         </div>
         <div class="form-grid cols-3">
+           <div class="field">
+            <label>İşçi kodu <span class="req">*</span> </label>
+            <input class="input" type="text" value="Avtomatik: BAAU-00xxx" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
+            <div class="field-hint">Avtomatik yaranır</div>
+          </div>
+
           <div class="field"><label>Ad <span class="req">*</span></label><input class="input" type="text" id="new-employee-ad" placeholder="Aysel" /></div>
           <div class="field"><label>Soyad <span class="req">*</span></label><input class="input" type="text" id="new-employee-soyad" placeholder="Quliyeva" /></div>
           <div class="field"><label>Ata adı</label><input class="input" type="text" placeholder="Vüqar qızı" /></div>
@@ -168,11 +174,7 @@
             <label>Əvvəlki soyad</label>
             <input class="input" type="text" placeholder="soyad dəyişikliyi olubsa" />
           </div>
-          <div class="field">
-            <label>İşçi kodu</label>
-            <input class="input" type="text" value="Avtomatik: BAAU-00xxx" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
-            <div class="field-hint">Avtomatik yaranır</div>
-          </div>
+         
           <div class="field">
             <label>Şəkil</label>
             <div class="dropzone" style="padding:10px 12px; display:flex; align-items:center; gap:8px; text-align:left;">
