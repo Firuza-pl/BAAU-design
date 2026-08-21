@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Çap — Ad günləri hesabatı — BAAU HR</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
+<style>
+  body { background: #d7dae8; }
+
+  .print-toolbar {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px; background: var(--navy-900); color: var(--text-on-dark);
+  }
+  .print-toolbar .left { display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; }
+  .print-toolbar .actions { display: flex; gap: 10px; }
+
+  .print-page-wrap { display: flex; justify-content: center; padding: 28px 16px 60px; }
+  .print-page {
+    width: 794px; max-width: 100%; min-height: 1123px;
+    background: #fff; box-shadow: var(--shadow-lg);
+    padding: 46px 52px;
+  }
+
+  .print-letterhead {
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 18px; border-bottom: 2px solid var(--navy-800);
+    margin-bottom: 22px;
+  }
+  .print-letterhead img { width: 46px; height: 46px; }
+  .print-letterhead-name { font-size: 15.5px; font-weight: 800; color: var(--navy-800); }
+  .print-letterhead-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 1px; letter-spacing: .03em; }
+  .print-letterhead-meta { margin-left: auto; text-align: right; font-size: 11.5px; color: var(--text-muted); }
+
+  .print-title { font-size: 19px; font-weight: 800; color: var(--text-primary); margin: 0 0 4px; }
+  .print-subtitle { font-size: 12.5px; color: var(--text-secondary); margin-bottom: 18px; }
+
+  .print-params {
+    display: flex; flex-wrap: wrap; gap: 10px 28px;
+    background: var(--surface-alt); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 16px; margin-bottom: 22px; font-size: 12px;
+  }
+  .print-params div span { display: block; color: var(--text-muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
+  .print-params div b { font-size: 13px; color: var(--text-primary); }
+
+  table.print-table { width: 100%; border-collapse: collapse; margin-bottom: 26px; }
+  .print-table thead th {
+    text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-on-dark-muted); font-weight: 700; padding: 10px 12px;
+    background: var(--navy-800);
+  }
+  .print-table thead th:first-child { border-top-left-radius: 6px; }
+  .print-table thead th:last-child { border-top-right-radius: 6px; }
+  .print-table tbody td { padding: 10px 12px; font-size: 12.5px; border-bottom: 1px solid var(--border); }
+  .print-table tbody tr:nth-child(even) td { background: var(--surface-alt); }
+
+  .print-summary { font-size: 12px; color: var(--text-secondary); margin-bottom: 40px; }
+
+  .print-footer {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-top: 1px solid var(--border); padding-top: 18px; margin-top: auto;
+  }
+  .print-signature { font-size: 12px; color: var(--text-secondary); }
+  .print-signature .line { display: inline-block; width: 170px; border-bottom: 1px solid var(--border-strong); margin-left: 8px; }
+  .print-pageno { font-size: 11px; color: var(--text-muted); }
+
+  @media print {
+    body { background: #fff; }
+    .print-toolbar { display: none; }
+    .print-page-wrap { padding: 0; display: block; }
+    .print-page { box-shadow: none; width: auto; min-height: 0; padding: 0; margin: 0; }
+    @page { size: A4; margin: 16mm 14mm; }
+    .print-table tbody tr { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-toolbar">
+  <div class="left">
+    <a href="report-birthdays.html" style="color:inherit; display:flex; align-items:center; gap:6px; text-decoration:none;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Geri
+    </a>
+    &nbsp;|&nbsp; Ad günləri hesabatı — çap görünüşü
+  </div>
+  <div class="actions">
+    <button type="button" class="btn btn-accent btn-sm" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+      Çap et
+    </button>
+  </div>
+</div>
+
+<div class="print-page-wrap">
+  <div class="print-page">
+
+    <div class="print-letterhead">
+      <img src="../assets/images/logo.png" alt="BAAU" />
+      <div>
+        <div class="print-letterhead-name">Bakı Avrasiya Universiteti</div>
+        <div class="print-letterhead-sub">İnsan Resursları şöbəsi</div>
+      </div>
+      <div class="print-letterhead-meta">
+        Yaradılma tarixi: 21.08.2026<br />
+        Hazırladı: Rüstəm Ələkbərov
+      </div>
+    </div>
+
+    <h1 class="print-title">Ad günləri hesabatı</h1>
+    <div class="print-subtitle">rpt.v_active_employee_birthdays — cari aktiv işçilər üzrə</div>
+
+    <div class="print-params">
+      <div><span>Dövr</span><b>Avqust 2026</b></div>
+      <div><span>Struktur bölmə</span><b>Hamısı</b></div>
+      <div><span>Nəticə</span><b>3 işçi</b></div>
+    </div>
+
+    <table class="print-table">
+      <thead>
+        <tr><th>№</th><th>İşçi</th><th>İşçi kodu</th><th>Doğum tarixi</th><th>Yaş</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Aysel Quliyeva</td><td>BAAU-00214</td><td>22.08.1990</td><td>35</td><td>İşləyir</td></tr>
+        <tr><td>2</td><td>Tural Hacıyev</td><td>BAAU-00187</td><td>05.08.1985</td><td>41</td><td>İşləyir</td></tr>
+        <tr><td>3</td><td>Sevinc Nəsirova</td><td>BAAU-00411</td><td>29.08.1993</td><td>32</td><td>İşləyir</td></tr>
+      </tbody>
+    </table>
+
+    <div class="print-summary">Cəmi 3 işçi tapıldı. Hesabat BAAU HR Automation System tərəfindən avtomatik yaradılmışdır.</div>
+
+    <div class="print-footer">
+      <div class="print-signature">HR Administrator: <span class="line"></span></div>
+      <div class="print-pageno">Səhifə 1 / 1</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
