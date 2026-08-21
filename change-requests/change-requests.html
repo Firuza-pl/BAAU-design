@@ -271,6 +271,10 @@
                     <button class="icon-btn btn-sm" style="width:32px;height:32px;" data-modal-open="modal-view-approved-0987">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
                     </button>
+                    <a href="../orders/order-create.html?employee=Aysel%20Quliyeva" class="btn btn-outline btn-sm">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+                      Əmr yaz
+                    </a>
                   </div>
                 </td>
               </tr>
@@ -434,14 +438,20 @@
         if (row) {
           var statusCell = row.querySelector(".status-cell");
           var actionCell = row.querySelector(".action-cell");
+          var employeeName = row.querySelector(".cell-person-name");
+          employeeName = employeeName ? employeeName.textContent.trim() : "";
+          var viewBtn = '<button class="icon-btn btn-sm" style="width:32px;height:32px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg></button>';
+
           if (action === "approve") {
             statusCell.innerHTML = '<span class="badge badge-success">Təsdiqləndi</span>';
             row.setAttribute("data-status", "approved");
+            var orderBtn = '<a href="../orders/order-create.html?employee=' + encodeURIComponent(employeeName) + '" class="btn btn-outline btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>Əmr yaz</a>';
+            actionCell.innerHTML = '<div class="cell-actions">' + viewBtn + orderBtn + '</div>';
           } else {
             statusCell.innerHTML = '<span class="badge badge-danger">Rədd edildi</span>';
             row.setAttribute("data-status", "rejected");
+            actionCell.innerHTML = '<div class="cell-actions">' + viewBtn + '</div>';
           }
-          actionCell.innerHTML = '<div class="cell-actions"><button class="icon-btn btn-sm" style="width:32px;height:32px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>';
 
           var pendingLeft = document.querySelectorAll('tbody tr[data-status="submitted"]').length;
           document.getElementById("stat-pending").textContent = pendingLeft;

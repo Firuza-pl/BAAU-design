@@ -176,7 +176,7 @@
                 <label>İşçi <span class="req">*</span></label>
                 <div class="input-icon-wrap">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-                  <input class="input" type="text" list="order-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." />
+                  <input class="input" type="text" id="order-employee-input" list="order-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." />
                 </div>
                 <datalist id="order-employee-list">
                   <option value="Aysel Quliyeva — BAAU-00214"></option>
@@ -386,6 +386,14 @@
     classSel.addEventListener("change", function () {
       hiringFields.style.display = classSel.value === "İşə qəbul haqqında" ? "block" : "none";
     });
+
+    // Dəyişiklik sorğuları kimi digər səhifələrdən "?employee=Ad Soyad"
+    // ilə gəlindikdə İşçi sahəsi əvvəlcədən doldurulur.
+    var employeeParam = new URLSearchParams(window.location.search).get("employee");
+    var employeeInput = document.getElementById("order-employee-input");
+    if (employeeParam && employeeInput) {
+      employeeInput.value = employeeParam;
+    }
   });
 </script>
 </body>
