@@ -1141,6 +1141,11 @@ table.data-table { width: 100%; border-collapse: collapse; min-width: 720px; }
 .dropzone:hover { border-color: var(--navy-500); background: #f2f3fb; }
 .dropzone svg { width: 26px; height: 26px; margin-bottom: 8px; color: var(--text-muted); }
 .dropzone b { color: var(--navy-700); }
+.dropzone.drag-over { border-color: var(--navy-500); background: #eef0fb; }
+.dropzone.has-file { border-style: solid; border-color: var(--success); background: var(--success-bg); color: var(--success); }
+.dropzone.has-file svg { color: var(--success); }
+.dropzone.has-file b { color: var(--success); }
+.dropzone.dropzone-error { border-color: var(--danger); background: var(--danger-bg); color: var(--danger); }
 
 .repeat-card {
   border: 1.5px solid var(--border);

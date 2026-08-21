@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   initPasswordToggles();
   initTableExports();
   initBirthdayBanner();
+  initMilitaryTabGender();
+  initDropzones();
 });
 
 /* =========================================================
@@ -295,6 +297,103 @@ function initBirthdayBanner() {
       banner.style.display = "none";
     });
   }
+}
+
+/* =========================================================
+   Hərbi (military) tab gated by gender
+   Shows the real military card for "Kişi", the "not applicable"
+   card for "Qadın". Reads gender from the "Cinsi" info-item when
+   the page has one (read-only employee-detail.html), otherwise
+   falls back to <body data-gender="..."> (form pages like
+   profile-edit-request.html, which have no info-item to read).
+   In production this reads employee.gender from the backend
+   instead of scraping the rendered field.
+   ========================================================= */
+
+function initMilitaryTabGender() {
+  var maleCard = document.querySelector("[data-military-male]");
+  var femaleCard = document.querySelector("[data-military-female]");
+  if (!maleCard || !femaleCard) return;
+
+  var genderValue = document.body.getAttribute("data-gender") || "";
+  document.querySelectorAll(".info-item").forEach(function (item) {
+    var label = item.querySelector(".info-label");
+    if (label && label.textContent.trim() === "Cinsi") {
+      var value = item.querySelector(".info-value");
+      if (value) genderValue = value.textContent.trim();
+    }
+  });
+
+  var isMale = genderValue === "Kişi";
+  maleCard.style.display = isMale ? "" : "none";
+  femaleCard.style.display = isMale ? "none" : "";
+}
+
+/* =========================================================
+   File upload dropzones
+   Every .dropzone becomes clickable (opens the OS file picker)
+   and drag-and-drop, restricted to PNG / JPEG / PDF. Purely
+   client-side preview here — no upload endpoint yet, so the
+   chosen file is just reflected in the dropzone's own label.
+   ========================================================= */
+
+function initDropzones() {
+  document.querySelectorAll(".dropzone").forEach(function (zone) {
+    if (zone.dataset.dzInit) return;
+    zone.dataset.dzInit = "1";
+
+    var input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf";
+    input.style.display = "none";
+    zone.appendChild(input);
+
+    function isAllowed(file) {
+      return /\.(png|jpe?g|pdf)$/i.test(file.name);
+    }
+
+    function applyFile(file) {
+      if (!file) return;
+      if (!isAllowed(file)) {
+        zone.classList.remove("has-file");
+        zone.classList.add("dropzone-error");
+        setTimeout(function () { zone.classList.remove("dropzone-error"); }, 1600);
+        return;
+      }
+      zone.classList.remove("dropzone-error");
+      zone.classList.add("has-file");
+      var sizeKb = Math.max(1, Math.round(file.size / 1024));
+      var span = zone.querySelector("span");
+      if (span) {
+        span.textContent = file.name + " · " + sizeKb + " KB";
+      } else {
+        var bold = zone.querySelector("div b");
+        var divs = zone.querySelectorAll(":scope > div");
+        if (bold) bold.textContent = file.name;
+        if (divs[1]) divs[1].textContent = sizeKb + " KB — dəyişmək üçün klikləyin";
+      }
+    }
+
+    zone.addEventListener("click", function (e) {
+      if (e.target !== input) input.click();
+    });
+    input.addEventListener("change", function () {
+      applyFile(input.files[0]);
+    });
+    zone.addEventListener("dragover", function (e) {
+      e.preventDefault();
+      zone.classList.add("drag-over");
+    });
+    zone.addEventListener("dragleave", function () {
+      zone.classList.remove("drag-over");
+    });
+    zone.addEventListener("drop", function (e) {
+      e.preventDefault();
+      zone.classList.remove("drag-over");
+      var file = e.dataTransfer.files && e.dataTransfer.files[0];
+      applyFile(file);
+    });
+  });
 }
 
 function initTableExports() {

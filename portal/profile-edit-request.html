@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../assets/css/style.css" />
 <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 </head>
-<body>
+<body data-gender="Qadın">
 
 <div class="app-shell">
 
@@ -106,6 +106,10 @@
           <button class="tab-btn" data-tab-target="family">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             Ailə
+          </button>
+          <button class="tab-btn" data-tab-target="military">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+            Hərbi
           </button>
           <button class="tab-btn" data-tab-target="prev-employment">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
@@ -335,6 +339,40 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
               Ailə üzvü əlavə et
             </button>
+          </div>
+        </div>
+
+        <!-- Hərbi — kişi işçilər üçün form, qadın işçilər üçün "aktiv deyil" mesajı.
+             Cins <body data-gender> ilə oxunur (bax initMilitaryTabGender() app.js-də). -->
+        <div class="tab-panel" data-tab-panel="military">
+          <div class="card card-pad" data-military-male  style="display:none;">
+            <div class="subsection-title" style="margin-top:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+              Hərbi qeydiyyat
+            </div>
+            <div class="form-grid cols-3">
+              <div class="field"><label>Hərbi bilet seriya/nömrə</label><input class="input" type="text" placeholder="məs. AZ 118273" /></div>
+              <div class="field"><label>Hərbi rütbə</label><input class="input" type="text" placeholder="məs. Kiçik leytenant (ehtiyatda)" /></div>
+              <div class="field"><label>Qeydiyyatda olduğu Hərbi Komissarlıq</label><input class="input" type="text" placeholder="məs. Nəsimi RHK" /></div>
+              <div class="field">
+                <label>Kateqoriya</label>
+                <select class="input"><option value="">Seçin</option><option>Yararlıdır</option><option>Məhdud yararlıdır</option><option>Yararsızdır</option></select>
+              </div>
+              <div class="field"><label>Qoşun növü</label><input class="input" type="text" placeholder="məs. Motoatıcı qoşunlar" /></div>
+              <div class="field">
+                <label>Hərbi bilet skanı</label>
+                <div class="dropzone" style="padding:10px 12px; display:flex; align-items:center; gap:8px; text-align:left;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin:0; flex-shrink:0; width:18px; height:18px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+                  <span>Yükləmək üçün klikləyin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-pad" data-military-female>
+            <div class="empty-state">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z"/></svg>
+              <p>Qadın işçilər üçün aktiv deyil — hərbi qeydiyyat məlumatı tələb olunmur.</p>
+            </div>
           </div>
         </div>
 
