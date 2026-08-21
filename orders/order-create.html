@@ -174,15 +174,18 @@
             <div class="form-grid">
               <div class="field form-span-2">
                 <label>İşçi <span class="req">*</span></label>
-                <select class="input">
-                  <option value="">Ad, soyad və ya işçi kodu üzrə seçin</option>
-                  <option>Aysel Quliyeva — BAAU-00214</option>
-                  <option>Tural Hacıyev — BAAU-00187</option>
-                  <option>Elçin Bağırov — BAAU-00302</option>
-                  <option>Günel Məmmədova — BAAU-00098</option>
-                  <option>Kamran Hüseynov — BAAU-00056</option>
-                  <option>Sevinc Nəsirova — BAAU-00411</option>
-                </select>
+                <div class="input-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+                  <input class="input" type="text" list="order-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." />
+                </div>
+                <datalist id="order-employee-list">
+                  <option value="Aysel Quliyeva — BAAU-00214"></option>
+                  <option value="Tural Hacıyev — BAAU-00187"></option>
+                  <option value="Elçin Bağırov — BAAU-00302"></option>
+                  <option value="Günel Məmmədova — BAAU-00098"></option>
+                  <option value="Kamran Hüseynov — BAAU-00056"></option>
+                  <option value="Sevinc Nəsirova — BAAU-00411"></option>
+                </datalist>
               </div>
               <div class="field">
                 <label>Cari struktur bölmə</label>

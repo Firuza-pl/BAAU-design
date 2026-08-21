@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initNotifMenu();
   initPasswordToggles();
   initTableExports();
+  initBirthdayBanner();
 });
 
 /* =========================================================
@@ -266,6 +267,34 @@ function exportTableToWord(table, filename) {
   });
   html += "</table></body></html>";
   downloadBlob(html, "application/msword;charset=utf-8", filename + ".doc");
+}
+
+/* =========================================================
+   Birthday greeting banner (employee portal)
+   <body data-birthday="MM-DD"> holds the logged-in employee's
+   birth month/day. In production this comes from the backend
+   with the session (GET /api/me), and the check runs server- or
+   client-side against the real employee record — here it's a
+   static demo value so the banner logic can be seen firing today.
+   ========================================================= */
+
+function initBirthdayBanner() {
+  var banner = document.querySelector("[data-birthday-banner]");
+  if (!banner) return;
+  var mmdd = document.body.getAttribute("data-birthday");
+  if (!mmdd) return;
+
+  var today = new Date();
+  var todayMmdd = String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
+  if (todayMmdd !== mmdd) return;
+
+  banner.style.display = "flex";
+  var closeBtn = banner.querySelector("[data-birthday-banner-close]");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      banner.style.display = "none";
+    });
+  }
 }
 
 function initTableExports() {
