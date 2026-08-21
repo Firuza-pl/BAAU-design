@@ -150,7 +150,7 @@
                 <label>İşçi <span class="req">*</span></label>
                 <div class="input-icon-wrap">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-                  <input class="input" type="text" list="leave-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." />
+                  <input class="input" type="text" list="leave-employee-list" autocomplete="off" placeholder="Ad, soyad və ya işçi kodu üzrə axtar..." data-leave-employee />
                 </div>
                 <datalist id="leave-employee-list">
                   <option value="Aysel Quliyeva — BAAU-00214"></option>
@@ -173,10 +173,10 @@
               </div>
               <div class="field">
                 <label>Qalıq (bu il)</label>
-                <input class="input" type="text" value="—" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
+                <input class="input" type="text" data-leave-balance value="—" disabled style="color:var(--text-muted); background:var(--surface-alt);" />
               </div>
             </div>
-            <div class="field-hint" style="margin-top:8px;">İşçi seçildikdə qalıq gün sayı avtomatik göstəriləcək (leave_balance görünüşündən).</div>
+            <div class="field-hint" style="margin-top:8px;">İşçi seçildikdə qalıq gün sayı avtomatik göstəriləcək.</div>
           </div>
 
           <div class="card card-pad mb-18">
@@ -235,7 +235,7 @@
               </div>
               <div class="timeline-v-item">
                 <div class="timeline-v-date">2-Cİ ADDIM</div>
-                <div class="timeline-v-title">Növ və tarixləri daxil edin</div>
+                <div class="timeline-v-title">Məzuniyyətin növün və tarixləri daxil edin</div>
                 <div class="timeline-v-sub">müddət başlama/bitmə tarixindən avtomatik hesablanır</div>
               </div>
               <div class="timeline-v-item">
@@ -312,6 +312,26 @@
     }
     startInput.addEventListener("change", syncDuration);
     endInput.addEventListener("change", syncDuration);
+
+    // Qalıq (bu il) — işçi seçildikdə avtomatik göstərilir.
+    // Mock dəyərlər: real backendda bu, seçilən employee_id ilə
+    // leave_balance görünüşünə sorğu ilə əvəz olunacaq.
+    var LEAVE_BALANCES = {
+      "Aysel Quliyeva — BAAU-00214": 14,
+      "Tural Hacıyev — BAAU-00187": 21,
+      "Elçin Bağırov — BAAU-00302": 16,
+      "Günel Məmmədova — BAAU-00098": 30,
+      "Kamran Hüseynov — BAAU-00056": 9,
+      "Sevinc Nəsirova — BAAU-00411": 25
+    };
+    var employeeInput = document.querySelector("[data-leave-employee]");
+    var balanceInput = document.querySelector("[data-leave-balance]");
+
+    function syncBalance() {
+      var match = LEAVE_BALANCES[employeeInput.value.trim()];
+      balanceInput.value = match !== undefined ? match + " gün" : "—";
+    }
+    employeeInput.addEventListener("input", syncBalance);
   });
 </script>
 </body>
