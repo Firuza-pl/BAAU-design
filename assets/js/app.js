@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initUserMenu();
   initNotifMenu();
   initPasswordToggles();
+  initTableExports();
 });
 
 /* =========================================================
@@ -181,6 +182,103 @@ function initTableFilter() {
       var text = row.textContent.toLowerCase();
       row.style.display = text.indexOf(q) !== -1 ? "" : "none";
     });
+  });
+}
+
+/* =========================================================
+   Excel / Word export
+   data-export-excel / data-export-word on a button inside a
+   .table-toolbar exports the table.data-table in the next
+   .table-wrap — always reads the LIVE table at click time, so
+   it works the same whether rows are mock data or came from a
+   real backend response, and skips rows hidden by the search box.
+   ========================================================= */
+
+function findExportTable(btn) {
+  var toolbar = btn.closest(".table-toolbar");
+  if (!toolbar) return null;
+  var wrap = toolbar.nextElementSibling;
+  while (wrap && !wrap.classList.contains("table-wrap")) wrap = wrap.nextElementSibling;
+  return wrap ? wrap.querySelector("table") : null;
+}
+
+function tableToRows(table) {
+  var rows = [];
+  var headers = Array.prototype.map.call(table.querySelectorAll("thead th"), function (th) {
+    return th.textContent.trim();
+  });
+  rows.push(headers);
+  Array.prototype.forEach.call(table.querySelectorAll("tbody tr"), function (tr) {
+    if (tr.style.display === "none") return;
+    var cells = Array.prototype.map.call(tr.querySelectorAll("td"), function (td) {
+      return td.textContent.trim().replace(/\s+/g, " ");
+    });
+    rows.push(cells);
+  });
+  return rows;
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function downloadBlob(content, mime, filename) {
+  var blob = new Blob(["﻿" + content], { type: mime });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+}
+
+function exportName(btn) {
+  return (btn.getAttribute("data-export-excel") || btn.getAttribute("data-export-word") ||
+    (document.title || "hesabat").split("—")[0].trim().replace(/\s+/g, "_").toLowerCase());
+}
+
+function exportTableToExcel(table, filename) {
+  var rows = tableToRows(table);
+  var html = "<html xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:x=\"urn:schemas-microsoft-com:office:excel\" xmlns=\"http://www.w3.org/TR/REC-html40\"><head><meta charset=\"UTF-8\"></head><body><table>";
+  rows.forEach(function (r, i) {
+    html += "<tr>" + r.map(function (c) {
+      var tag = i === 0 ? "th" : "td";
+      return "<" + tag + ">" + escapeHtml(c) + "</" + tag + ">";
+    }).join("") + "</tr>";
+  });
+  html += "</table></body></html>";
+  downloadBlob(html, "application/vnd.ms-excel;charset=utf-8", filename + ".xls");
+}
+
+function exportTableToWord(table, filename) {
+  var rows = tableToRows(table);
+  var title = document.querySelector("h1") ? document.querySelector("h1").textContent.trim() : "Hesabat";
+  var html = "<html xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" xmlns=\"http://www.w3.org/TR/REC-html40\"><head><meta charset=\"UTF-8\">" +
+    "<style>body{font-family:Calibri,Arial,sans-serif;} table{border-collapse:collapse;width:100%;} td,th{border:1px solid #999;padding:6px 10px;font-size:12px;} th{background:#262d6e;color:#fff;text-align:left;}</style>" +
+    "</head><body><h3>" + escapeHtml(title) + "</h3><table>";
+  rows.forEach(function (r, i) {
+    html += "<tr>" + r.map(function (c) {
+      var tag = i === 0 ? "th" : "td";
+      return "<" + tag + ">" + escapeHtml(c) + "</" + tag + ">";
+    }).join("") + "</tr>";
+  });
+  html += "</table></body></html>";
+  downloadBlob(html, "application/msword;charset=utf-8", filename + ".doc");
+}
+
+function initTableExports() {
+  document.addEventListener("click", function (e) {
+    var excelBtn = e.target.closest("[data-export-excel]");
+    var wordBtn = e.target.closest("[data-export-word]");
+    var btn = excelBtn || wordBtn;
+    if (!btn) return;
+    var table = findExportTable(btn);
+    if (!table) return;
+    var filename = exportName(btn);
+    if (excelBtn) exportTableToExcel(table, filename);
+    else exportTableToWord(table, filename);
   });
 }
 
